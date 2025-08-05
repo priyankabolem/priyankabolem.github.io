@@ -1,17 +1,25 @@
-// gitprofile.config.ts
-
 const CONFIG = {
   github: {
-    username: 'priyankabolem',
+    username: 'priyankabolem', // ✅ Your GitHub username
   },
-  base: '/',
+
+  base: '/', // ✅ For GitHub Pages using username.github.io
+
   projects: {
     github: {
-      display: false,
-      header: 'GitHub Projects',
+      display: false, // ❌ Hide automatic GitHub projects
+      header: '',
       mode: 'manual',
       manual: {
         projects: [],
+      },
+      automatic: {
+        sortBy: 'stars',
+        limit: 0,
+        exclude: {
+          forks: true,
+          projects: [],
+        },
       },
     },
     external: {
@@ -19,45 +27,55 @@ const CONFIG = {
       projects: [
         {
           title: 'NutriGuide',
-          description:
-            'AI-powered app that analyzes food images and provides nutritional insights using TensorFlow and Hugging Face.',
-          imageUrl:
-            'https://user-images.githubusercontent.com/placeholder-nutriguide.png', // Replace with a real image URL if available
+          description: 'AI-powered app that analyzes food images and provides nutritional insights using TensorFlow and Hugging Face.',
+          imageUrl: 'https://raw.githubusercontent.com/priyankabolem/nutriguide/main/screenshot.png',
           link: 'https://github.com/priyankabolem/nutriguide',
         },
         {
           title: 'NWMSU Chatbot',
-          description:
-            'University chatbot using LangChain, Neo4j, and OpenAI for Retrieval-Augmented Generation.',
-          imageUrl:
-            'https://user-images.githubusercontent.com/placeholder-nwmsu.png', // Replace with a real image URL if available
+          description: 'University chatbot using LangChain, Neo4j, and OpenAI for Retrieval-Augmented Generation.',
+          imageUrl: 'https://raw.githubusercontent.com/priyankabolem/nwmsu-chatbot-rag/main/screenshot.png',
           link: 'https://github.com/priyankabolem/nwmsu-chatbot-rag',
         },
         {
           title: 'LendingClub Loan Approval',
-          description:
-            'ML case study predicting loan approval using Scikit-learn, SMOTE, ROC-AUC, and EDA techniques.',
-          imageUrl:
-            'https://user-images.githubusercontent.com/placeholder-lendingclub.png', // Replace with a real image URL if available
+          description: 'ML case study predicting loan approval using Scikit-learn, SMOTE, ROC-AUC, and EDA techniques.',
+          imageUrl: 'https://raw.githubusercontent.com/priyankabolem/lendingclub-loan-approval-ml/main/screenshot.png',
           link: 'https://github.com/priyankabolem/lendingclub-loan-approval-ml',
         },
       ],
     },
   },
-  seo: {
-    title: 'Portfolio of Priyanka Bolem',
-    description: 'AI/ML portfolio showcasing projects and skills by Priyanka Bolem.',
-    imageURL: '', // Optional: Add social preview image
-  },
+
+  location: 'Seattle, WA',
+
   social: {
     linkedin: 'priyanka-bolem-66763041',
     github: 'priyankabolem',
     email: 'priyankabolem@gmail.com',
-    website: '', // Optional
+    website: '',
+    x: '',
+    mastodon: '',
+    facebook: '',
+    instagram: '',
+    reddit: '',
+    threads: '',
+    youtube: '',
+    udemy: '',
+    dribbble: '',
+    behance: '',
+    medium: '',
+    dev: '',
+    stackoverflow: '',
+    discord: '',
+    telegram: '',
+    phone: '',
   },
+
   resume: {
-    fileUrl: '', // Optional: add your uploaded resume link here
+    fileUrl: '', // Optional: Add your resume PDF link
   },
+
   skills: [
     'Python',
     'TensorFlow',
@@ -72,40 +90,96 @@ const CONFIG = {
     'AWS',
     'Azure',
   ],
-  experiences: [],
+
+  experiences: [
+    {
+      company: 'Adisys Corporation',
+      position: 'Software Engineer Intern',
+      from: 'Jan 2024',
+      to: 'May 2024',
+      companyLink: 'https://adisys.com',
+    },
+  ],
+
   certifications: [],
-  educations: [],
+
+  educations: [
+    {
+      institution: 'Northwest Missouri State University',
+      degree: 'Master’s in Applied Computer Science',
+      from: '2023',
+      to: '2025',
+    },
+  ],
+
   publications: [],
+
   blog: {
-    source: '', // 'dev' or 'medium' — leave empty to hide blog section
+    source: '', // medium | dev
     username: '',
-    limit: 0,
+    limit: 2,
   },
+
   googleAnalytics: {
-    id: '', // Optional: add your Google Analytics ID
+    id: '',
   },
+
   hotjar: {
     id: '',
     snippetVersion: 6,
   },
+
   themeConfig: {
-    defaultTheme: 'lofi',
+    defaultTheme: 'aqua',
     disableSwitch: false,
     respectPrefersColorScheme: false,
     displayAvatarRing: true,
     themes: [
       'light',
       'dark',
-      'lofi',
       'cupcake',
-      'dracula',
-      'autumn',
-      'night',
+      'bumblebee',
+      'emerald',
+      'corporate',
+      'synthwave',
+      'retro',
+      'cyberpunk',
+      'valentine',
+      'halloween',
+      'garden',
+      'forest',
+      'aqua',
+      'lofi',
+      'pastel',
       'fantasy',
+      'wireframe',
+      'black',
       'luxury',
+      'dracula',
+      'cmyk',
+      'autumn',
+      'business',
+      'acid',
+      'lemonade',
+      'night',
+      'coffee',
+      'winter',
+      'dim',
+      'nord',
+      'sunset',
+      'caramellatte',
+      'abyss',
+      'silk',
+      'procyon',
     ],
   },
-  footer: `Made with <a class="text-primary" href="https://github.com/arifszn/gitprofile" target="_blank" rel="noreferrer">GitProfile</a> and ❤️`,
+
+  footer: `Made with <a 
+    class="text-primary" href="https://github.com/arifszn/gitprofile"
+    target="_blank"
+    rel="noreferrer"
+  >GitProfile</a> and ❤️`,
+
   enablePWA: true,
 };
 
