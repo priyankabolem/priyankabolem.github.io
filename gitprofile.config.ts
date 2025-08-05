@@ -11,7 +11,7 @@ const CONFIG = {
       header: 'GitHub Projects',
       mode: 'manual',
       manual: {
-        projects: ['priyankabolem/RAG-Chatbot-1', 'priyankabolem/lendingclub-loan-approval-ml', 'priyankabolem/PlantDiseasesDetection'],
+        projects: ['priyankabolem/RAG-Chatbot-1', 'priyankabolem/lendingclub-loan-approval-ml', 'priyankabolem/PlantDiseasesDetection', 'priyankabolem/PatternsSpringbootproject'],
       },
     },
     external: {
@@ -27,8 +27,8 @@ const CONFIG = {
         {
           title: 'LendingClub Loan Prediction',
           description:
-            '📊 ML model achieving 84% accuracy in loan default prediction. Implemented using XGBoost, SMOTE for imbalanced data, and comprehensive EDA with business insights.',
-          imageUrl: 'https://img.freepik.com/free-vector/bank-loan-concept-illustration_114360-17867.jpg',
+            '💰 ML model achieving 84% accuracy in loan default prediction. Implemented using XGBoost, SMOTE for imbalanced data, and comprehensive EDA with business insights.',
+          imageUrl: 'https://img.freepik.com/free-vector/finance-leaders-concept-illustration_114360-8775.jpg',
           link: 'https://github.com/priyankabolem/lendingclub-loan-approval-ml',
         },
         {
@@ -37,6 +37,13 @@ const CONFIG = {
             '🌱 Computer vision system for agricultural AI using deep learning. Identifies plant diseases from images to help farmers protect their crops and improve yields.',
           imageUrl: 'https://img.freepik.com/free-vector/smart-farming-technology-background-vector-agriculture-digital-transformation_53876-175407.jpg',
           link: 'https://github.com/priyankabolem/PlantDiseasesDetection',
+        },
+        {
+          title: 'Spring Boot Design Patterns',
+          description:
+            '☕ Enterprise-grade Spring Boot application demonstrating design patterns, REST APIs, and containerization with Docker. Showcases clean architecture and Java best practices.',
+          imageUrl: 'https://img.freepik.com/free-vector/app-development-illustration_52683-47931.jpg',
+          link: 'https://github.com/priyankabolem/PatternsSpringbootproject',
         },
       ],
     },
