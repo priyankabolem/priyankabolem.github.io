@@ -20,7 +20,7 @@ const CONFIG = {
         {
           title: 'NWMSU RAG Chatbot',
           description:
-            '🚀AI-powered university chatbot using LangChain, Neo4j, and OpenAI GPT-3.5. Features graph-based knowledge retrieval and is live deployed on Streamlit Cloud.',
+            '🚀 AI-powered university chatbot using LangChain, Neo4j, and OpenAI GPT-3.5. Features graph-based knowledge retrieval and is live deployed on Streamlit Cloud.',
           imageUrl: 'https://img.freepik.com/free-vector/chatbot-conversation-vectorart_78370-4107.jpg',
           link: 'https://github.com/priyankabolem/RAG-Chatbot-1',
         },
@@ -41,23 +41,44 @@ const CONFIG = {
         {
           title: 'Spring Boot Design Patterns',
           description:
-            '☕Enterprise-grade Spring Boot application demonstrating design patterns, REST APIs, and containerization with Docker. Showcases clean architecture and Java best practices.',
+            '☕ Enterprise-grade Spring Boot application demonstrating design patterns, REST APIs, and containerization with Docker. Showcases clean architecture and Java best practices.',
           imageUrl: 'https://img.freepik.com/free-vector/app-development-illustration_52683-47931.jpg',
           link: 'https://github.com/priyankabolem/PatternsSpringbootproject',
         },
         {
           title: 'TensorFlow Contributions',
           description:
-            '🤖Contributing to the world\'s leading machine learning framework. Learning from and engaging with Google\'s open-source ML ecosystem.',
+            '🤖 Contributing to the world\'s leading machine learning framework. Learning from and engaging with Google\'s open-source ML ecosystem.',
           imageUrl: 'https://img.freepik.com/free-vector/artificial-intelligence-ai-robot-gives-recommendation_107791-4592.jpg',
           link: 'https://github.com/tensorflow/tensorflow',
         },
         {
           title: 'AI Medical Research Copilot',
           description:
-            '🏥Collaborative AI tool for medical research analysis. Leverages NLP to assist researchers in literature review and data extraction from medical papers.',
+            '🏥 Collaborative AI tool for medical research analysis. Leverages NLP to assist researchers in literature review and data extraction from medical papers.',
           imageUrl: 'https://img.freepik.com/free-vector/medical-technology-science-background-vector-blue-with-blank-space_53876-117739.jpg',
           link: 'https://github.com/priyankabolem/AI-Copilot-for-Medical-Research',
+        },
+        {
+          title: 'Gen-AI Project',
+          description:
+            '🧠 Collaborative generative AI project exploring cutting-edge LLM applications. Team contribution under Supriya Rajagopalan\'s leadership.',
+          imageUrl: 'https://img.freepik.com/free-vector/artificial-intelligence-ai-robot-gives-recommendation_107791-4592.jpg',
+          link: 'https://github.com/SupriyaRajaiahgari/GenAi',
+        },
+        {
+          title: 'AttendanceBuddy',
+          description:
+            '📱 Smart attendance management system with face recognition and automated tracking. Collaborated with Bhargav Vermasaji\'s team.',
+          imageUrl: 'https://img.freepik.com/free-vector/time-management-concept-illustration_114360-1013.jpg',
+          link: 'https://github.com/bhargavvarmasagi/Attendance-Buddy',
+        },
+        {
+          title: 'GDP Fall 2024 - Group 5',
+          description:
+            '🏆 Graduate Directed Project for Fall 2024. Collaborative development project with team led by SriKanth, showcasing agile development practices.',
+          imageUrl: 'https://img.freepik.com/free-vector/hackathon-concept-illustration_114360-5892.jpg',
+          link: 'https://github.com/5r1kanth/GDPFall24-Group05',
         },
       ],
     },
