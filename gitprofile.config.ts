@@ -104,7 +104,7 @@ const CONFIG = {
     imageURL: 'https://avatars.githubusercontent.com/u/166872320?v=4',
   },
   social: {
-    linkedin: 'priyanka-bolem-66763041',
+    linkedin: 'priyanka-bolem',
     github: 'priyankabolem',
     email: 'priyankabolem@gmail.com',
     website: 'https://priyankabolem.github.io',
