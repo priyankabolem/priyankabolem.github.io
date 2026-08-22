@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://priyankabolem.github.io/sitemap.xml
