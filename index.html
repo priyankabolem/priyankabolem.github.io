@@ -499,17 +499,18 @@ html.js .reveal.in{opacity:1;transform:none}
         <article class="card reveal">
           <div class="card-top">
             <h3>Credit Card Fraud Detection: Production MLOps</h3>
-            <span class="badge wip">In development</span>
+            <span class="badge live">Complete</span>
           </div>
-          <p class="value">Fraud scoring on a heavily imbalanced dataset (284,807 transactions, 0.17% fraud), evaluated on AUPRC rather than accuracy, and wired into an AWS deployment path with a retrieval-based explainability layer.</p>
+          <p class="value">Fraud scoring on a 1:578-imbalanced dataset (284,807 transactions, 0.17% fraud), built the way production systems are evaluated: a chronological split, AUPRC-driven selection, and an operating threshold set by a precision budget.</p>
           <ul class="inside">
-            <li>XGBoost classifier; AUPRC-driven model selection and threshold tuning for the 0.17% positive class.</li>
-            <li>MLflow model registry, Airflow DAGs for retraining and batch scoring, Evidently drift checks.</li>
-            <li>FastAPI service targeting AWS ECR → ECS Fargate with S3 artifacts and CloudWatch logs/metrics.</li>
-            <li>Claude-API RAG layer that turns feature attributions into analyst-readable explanations; uv + pyproject tooling.</li>
+            <li>XGBoost vs a logistic baseline on a chronological 70/15/15 split: test AUPRC 0.765 vs 0.718, ROC-AUC 0.979; threshold frozen on validation for a 0.90 precision budget.</li>
+            <li>MLflow experiment tracking; the served artifact ships with its threshold, metrics and data checksum.</li>
+            <li>FastAPI scoring service (single-digit millisecond latency), Dockerized, health and latency reporting.</li>
+            <li>PSI drift monitoring implemented from scratch; it flags the day-over-day feature shift (PSI 1.57 on V1) that explains the validation-to-test precision drop.</li>
+            <li>Ten tests run in CI on a synthetic model, so the pipeline never needs the 144 MB dataset.</li>
           </ul>
           <div class="stack">
-            <span class="chip hi">XGBoost</span><span class="chip">MLflow</span><span class="chip">Airflow</span><span class="chip">Evidently</span><span class="chip">FastAPI</span><span class="chip">ECS Fargate</span><span class="chip">S3</span><span class="chip">CloudWatch</span><span class="chip">RAG</span><span class="chip">uv</span>
+            <span class="chip hi">XGBoost</span><span class="chip">MLflow</span><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">PSI drift monitoring</span><span class="chip">GitHub Actions</span><span class="chip">pytest</span>
           </div>
           <div class="card-links">
             <a class="btn btn-sm" href="https://github.com/priyankabolem/fraud-detection-mlops" target="_blank" rel="noopener">GitHub <svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
