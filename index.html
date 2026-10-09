@@ -31,7 +31,7 @@
   "jobTitle": "Machine Learning Engineer",
   "url": "https://priyankabolem.github.io/",
   "image": "https://avatars.githubusercontent.com/u/179726264?v=4",
-  "email": "mailto:priyankabolem93@gmail.com",
+  "email": "priyankabolem93@gmail.com",
   "address": { "@type": "PostalAddress", "addressLocality": "Seattle", "addressRegion": "WA", "addressCountry": "US" },
   "worksFor": { "@type": "Organization", "name": "Adisys Corporation" },
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "Northwest Missouri State University" },
@@ -571,7 +571,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding:16px 0;font-fami
             </div>
           </div>
           <div class="run-foot">
-            <span class="sysmsg" id="sysmsg">Six stages, seven projects. Nothing here is a stage I have only read about.</span>
+            <span class="sysmsg" id="sysmsg">Five stages plus an agent layer, mapped across seven projects.</span>
             <button class="replay" type="button" id="sysreset" hidden>clear filter</button>
           </div>
         </div>
@@ -585,7 +585,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding:16px 0;font-fami
           <details class="pr" id="p-sentiment" data-n="data features training serving monitoring">
             <summary>
               <span class="ix">01</span>
-              <span class="ttl"><span class="nm">Financial Sentiment MLOps Platform</span><span class="mt">finbert &middot; dvc &middot; mlflow &middot; k8s &middot; <b>~0.85 F1, sub-100 ms p99</b></span></span>
+              <span class="ttl"><span class="nm">Financial Sentiment MLOps Platform</span><span class="mt">finbert fine-tune &middot; mlflow &middot; fastapi &middot; k8s &middot; <b>drift monitoring + ci/cd</b></span></span>
               <span class="rr"><span class="badge live">Live demo</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span>
             </summary>
             <div class="pbody"><div class="cs">
@@ -594,7 +594,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding:16px 0;font-fami
               <div class="full"><h5>Architecture</h5><div class="arch">News API, Alpha Vantage, Reddit  <span class="ar">-&gt;</span>  DVC-versioned training  <span class="ar">-&gt;</span>  MLflow registry
      <span class="ar">-&gt;</span>  FastAPI in a multi-stage Docker image  <span class="ar">-&gt;</span>  Kubernetes with HPA
      <span class="ar">-&gt;</span>  Prometheus / Grafana + Evidently drift reports   <span class="c">// GitHub Actions CI/CD, pytest</span></div></div>
-              <div class="full"><h5>Measured result</h5><div class="result"><b>~0.85 F1</b> on the test set, served at <b>sub-100 ms p99</b> latency, with drift reports and runtime metrics shipping alongside the model.</div></div>
+              <div class="full"><h5>What is built</h5><div class="result">A <b>FinBERT fine-tuning pipeline</b> with DVC-versioned data and MLflow tracking, a <b>FastAPI service</b> in a multi-stage Docker image with <b>Kubernetes manifests including an HPA</b>, <b>Evidently drift monitoring</b> and Prometheus metrics, and <b>GitHub Actions CI/CD</b> running lint, unit and integration tests plus a Trivy scan. No benchmark run is published in the repository, so no accuracy or latency figure is claimed here.</div></div>
               <div class="full"><h5>Stages</h5><div class="chips" style="gap:5px"><span class="ntag" data-n="data">data</span><span class="ntag" data-n="features">features</span><span class="ntag" data-n="training">training</span><span class="ntag" data-n="serving">serving</span><span class="ntag" data-n="monitoring">monitoring</span></div></div>
               <div class="full"><div class="plinks">
                 <a class="btn btn-p" href="https://huggingface.co/spaces/Priyabolem/financial-sentiment-analysis" target="_blank" rel="noopener">Live demo</a>
@@ -615,7 +615,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding:16px 0;font-fami
               <div class="full"><h5>Architecture</h5><div class="arch">chronological split  <span class="ar">-&gt;</span>  XGBoost vs logistic baseline  <span class="ar">-&gt;</span>  MLflow tracking
      <span class="ar">-&gt;</span>  artifact ships with threshold + metrics + data checksum
      <span class="ar">-&gt;</span>  FastAPI scoring service in Docker  <span class="ar">-&gt;</span>  PSI drift monitor   <span class="c">// 10 CI tests on a synthetic model</span></div></div>
-              <div class="full"><h5>Measured result</h5><div class="result"><b>Test AUPRC 0.765</b> against <b>0.718</b> for the logistic baseline, ROC-AUC <b>0.979</b>, threshold set for a <b>0.90 precision budget</b>. PSI 1.57 on V1 flags the day-over-day shift that explains the validation to test precision drop.</div></div>
+              <div class="full"><h5>Measured result</h5><div class="result"><b>Test AUPRC 0.765</b> against <b>0.718</b> for the logistic baseline, ROC-AUC <b>0.979</b>, threshold set for a <b>0.90 precision budget</b>. PSI flags a large shift in feature V1 between validation and test (PSI 1.57), consistent with the precision drop seen across those splits.</div></div>
               <div class="full"><h5>Stages</h5><div class="chips" style="gap:5px"><span class="ntag" data-n="features">features</span><span class="ntag" data-n="training">training</span><span class="ntag" data-n="serving">serving</span><span class="ntag" data-n="monitoring">monitoring</span></div></div>
               <div class="full"><div class="plinks"><a class="btn" href="https://github.com/priyankabolem/fraud-detection-mlops" target="_blank" rel="noopener">GitHub</a></div></div>
             </div></div>
@@ -651,7 +651,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding:16px 0;font-fami
               <div class="full"><h5>Architecture</h5><div class="arch">academic web content  <span class="ar">-&gt;</span>  Neo4j knowledge graph + OpenAI embeddings
      <span class="ar">-&gt;</span>  LangChain retrieval, context assembly, grounded generation
      <span class="ar">-&gt;</span>  Streamlit on Community Cloud   <span class="c">// free tier, may be asleep on first load</span></div></div>
-              <div class="full"><h5>Measured result</h5><div class="result"><b>Two retrieval paths in one pipeline</b>, so relational queries survive retrieval instead of being flattened, with answers grounded in both the graph structure and the source text.</div></div>
+              <div class="full"><h5>Outcome</h5><div class="result">Demonstrates <b>hybrid graph plus vector retrieval</b>: a Neo4j relationship lookup runs alongside embedding similarity, so relational queries keep their structure instead of being flattened, and answers are grounded in both the graph and the source text. No retrieval benchmark is published for this repository, so no quality metric is claimed.</div></div>
               <div class="full"><h5>Stages</h5><div class="chips" style="gap:5px"><span class="ntag" data-n="agent">agent</span><span class="ntag" data-n="features">features</span><span class="ntag" data-n="serving">serving</span></div></div>
               <div class="full"><div class="plinks">
                 <a class="btn btn-p" href="https://nwmsu-rag-chatbot.streamlit.app" target="_blank" rel="noopener">Live demo</a>
@@ -760,7 +760,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding:16px 0;font-fami
       <section class="wrap sec" id="contact" aria-labelledby="h-ct">
         <div class="sec-h"><span class="n">07</span><h2 id="h-ct">Contact</h2></div>
         <div class="panel"><div class="ct">
-          <h2>Let us build something</h2>
+          <h2>Let's build something</h2>
           <p>I am open to Machine Learning Engineer, AI Engineer, Agentic AI and Forward Deployed Engineer roles. Questions about the projects, agentic systems or production ML are welcome too. Email is the fastest way to reach me.</p>
           <div class="ctl">
             <a href="mailto:priyankabolem93@gmail.com?subject=Hello%20from%20your%20portfolio"><span class="k">email</span><span class="v">priyankabolem93@gmail.com</span></a>
@@ -871,7 +871,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding:16px 0;font-fami
     smsg.innerHTML = stage
       ? 'Stage <b>'+SLABEL[stage]+'</b> selected. '+shown+' of '+pcards.length+
         ' projects and the matching skills are highlighted.'
-      : 'Six stages, seven projects. Nothing here is a stage I have only read about.';
+      : 'Five stages plus an agent layer, mapped across seven projects.';
   }
   snodes.forEach(function(b){
     b.addEventListener('click',function(){
