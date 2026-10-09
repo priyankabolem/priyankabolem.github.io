@@ -5,27 +5,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Priyanka Bolem | Machine Learning Engineer</title>
-<meta name="description" content="Priyanka Bolem is a Machine Learning Engineer in Seattle with 4+ years shipping production ML: predictive and probabilistic modeling, low-latency inference on AWS SageMaker, distributed pipelines, and production monitoring.">
+<meta name="description" content="Priyanka Bolem is a Machine Learning Engineer in Greater Seattle, WA, building agentic AI and RAG systems in production with MLOps on AWS and GCP. 4.5+ years shipping ML.">
 <meta name="author" content="Priyanka Bolem">
 <meta name="color-scheme" content="dark light">
-<meta name="theme-color" content="#0b0f14">
+<meta name="theme-color" content="#08090d" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
 <link rel="canonical" href="https://priyankabolem.github.io/">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Priyanka Bolem | Machine Learning Engineer">
-<meta property="og:description" content="ML engineer with 4+ years shipping production models over high-volume real-time data. SageMaker, Spark/Databricks/Airflow, MLflow, drift monitoring. Seattle.">
+<meta property="og:description" content="Agentic AI and RAG systems in production, plus the MLOps on AWS and GCP that keeps them running. 4.5+ years. Greater Seattle, WA.">
 <meta property="og:url" content="https://priyankabolem.github.io/">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/179726264?v=4">
 <meta property="og:site_name" content="Priyanka Bolem">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Priyanka Bolem | Machine Learning Engineer">
-<meta name="twitter:description" content="Production ML engineer in Seattle. SageMaker, Spark, MLflow, drift monitoring.">
+<meta name="twitter:description" content="Agentic AI and RAG in production, MLOps on AWS and GCP. Greater Seattle, WA.">
 <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/179726264?v=4">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 
 <script type="application/ld+json">
 {
@@ -36,265 +37,369 @@
   "url": "https://priyankabolem.github.io/",
   "image": "https://avatars.githubusercontent.com/u/179726264?v=4",
   "email": "mailto:priyankabolem93@gmail.com",
-  "telephone": "+1-206-305-6760",
   "address": { "@type": "PostalAddress", "addressLocality": "Seattle", "addressRegion": "WA", "addressCountry": "US" },
-  "worksFor": { "@type": "Organization", "name": "Truveta" },
+  "worksFor": { "@type": "Organization", "name": "Adisys Corporation" },
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "Northwest Missouri State University" },
-  "sameAs": [
-    "https://www.linkedin.com/in/priyanka-bolem",
-    "https://github.com/priyankabolem",
-    "https://huggingface.co/Priyabolem"
-  ],
-  "knowsAbout": ["Machine Learning", "MLOps", "AWS SageMaker", "PyTorch", "TensorFlow", "Apache Spark", "Airflow", "MLflow", "Bayesian Optimization", "Retrieval-Augmented Generation"]
+  "sameAs": ["https://github.com/priyankabolem"],
+  "knowsAbout": ["Agentic AI","Retrieval-Augmented Generation","Model Context Protocol","LLM evaluation","Machine Learning","MLOps","AWS SageMaker","Google Cloud Vertex AI","FastAPI","TensorFlow","PyTorch","Airflow","MLflow"]
 }
 </script>
 
 <style>
+/* ---------- tokens ---------- */
 :root{
-  --bg:#0b0f14; --bg-2:#0f151c; --surface:#121a23; --surface-2:#18222d; --border:#223040; --border-2:#2c3d50;
-  --text:#e6edf3; --text-2:#b3bfcb; --muted:#8b98a6; --accent:#2dd4bf; --accent-ink:#0b0f14; --accent-soft:rgba(45,212,191,.12);
-  --ring:rgba(45,212,191,.55); --shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 10px 30px rgba(0,0,0,.35);
-  --nav-bg:rgba(11,15,20,.82);
-  --ok:#34d399; --warn:#fbbf24; --info:#60a5fa;
-  --radius:12px; --radius-s:8px;
+  --bg:#08090d; --bg-2:#0b0d13; --surface:#11131b; --surface-2:#161925; --surface-3:#1d2131;
+  --border:#232736; --border-2:#303549;
+  --text:#edeef3; --text-2:#a7adbe; --muted:#787f92;
+  --a1:#8b7bff; --a2:#46e0c8; --accent:#8b7bff; --accent-ink:#0a0b10;
+  --accent-soft:rgba(139,123,255,.14); --accent-line:rgba(139,123,255,.38);
+  --ring:rgba(139,123,255,.6);
+  --ok:#46e0c8; --warn:#f5c35c; --info:#79a8ff;
+  --nav-bg:rgba(8,9,13,.72);
+  --grid:rgba(255,255,255,.035);
+  --shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 18px 50px -20px rgba(0,0,0,.8);
+  --shadow-sm:0 1px 0 rgba(255,255,255,.03) inset, 0 6px 20px -12px rgba(0,0,0,.7);
+  --glow-1:rgba(139,123,255,.20); --glow-2:rgba(70,224,200,.14);
+  --r:14px; --r-s:10px; --r-xs:7px;
+  --display:"Space Grotesk","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   --font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  color-scheme:dark;
-}
-:root[data-theme="light"]{
-  --bg:#f6f8fa; --bg-2:#eef2f6; --surface:#ffffff; --surface-2:#f1f5f9; --border:#d9e1ea; --border-2:#c4d0dc;
-  --text:#0f172a; --text-2:#334155; --muted:#526070; --accent:#0f766e; --accent-ink:#ffffff; --accent-soft:rgba(15,118,110,.10);
-  --ring:rgba(15,118,110,.5); --shadow:0 1px 2px rgba(15,23,42,.05), 0 10px 30px rgba(15,23,42,.06);
-  --nav-bg:rgba(246,248,250,.85);
-  --ok:#047857; --warn:#b45309; --info:#1d4ed8;
-  color-scheme:light;
+  --maxw:1160px;
 }
 @media (prefers-color-scheme: light){
-  :root:not([data-theme]){
-    --bg:#f6f8fa; --bg-2:#eef2f6; --surface:#ffffff; --surface-2:#f1f5f9; --border:#d9e1ea; --border-2:#c4d0dc;
-    --text:#0f172a; --text-2:#334155; --muted:#526070; --accent:#0f766e; --accent-ink:#ffffff; --accent-soft:rgba(15,118,110,.10);
-    --ring:rgba(15,118,110,.5); --shadow:0 1px 2px rgba(15,23,42,.05), 0 10px 30px rgba(15,23,42,.06);
-    --nav-bg:rgba(246,248,250,.85);
-    --ok:#047857; --warn:#b45309; --info:#1d4ed8;
-    color-scheme:light;
+  :root:not([data-theme="dark"]){
+    --bg:#fbfbfd; --bg-2:#f3f4f8; --surface:#ffffff; --surface-2:#f7f8fc; --surface-3:#eef0f7;
+    --border:#e2e5ee; --border-2:#d2d7e4;
+    --text:#111319; --text-2:#4b5161; --muted:#6c7383;
+    --a1:#5b46e5; --a2:#0d9683; --accent:#5b46e5; --accent-ink:#ffffff;
+    --accent-soft:rgba(91,70,229,.09); --accent-line:rgba(91,70,229,.28);
+    --ring:rgba(91,70,229,.5);
+    --ok:#0d9683; --warn:#b07708; --info:#2563eb;
+    --nav-bg:rgba(251,251,253,.78);
+    --grid:rgba(17,19,25,.045);
+    --shadow:0 1px 2px rgba(17,19,25,.04), 0 18px 40px -24px rgba(17,19,25,.22);
+    --shadow-sm:0 1px 2px rgba(17,19,25,.04), 0 8px 20px -14px rgba(17,19,25,.18);
+    --glow-1:rgba(91,70,229,.10); --glow-2:rgba(13,150,131,.09);
   }
 }
+:root[data-theme="light"]{
+  --bg:#fbfbfd; --bg-2:#f3f4f8; --surface:#ffffff; --surface-2:#f7f8fc; --surface-3:#eef0f7;
+  --border:#e2e5ee; --border-2:#d2d7e4;
+  --text:#111319; --text-2:#4b5161; --muted:#6c7383;
+  --a1:#5b46e5; --a2:#0d9683; --accent:#5b46e5; --accent-ink:#ffffff;
+  --accent-soft:rgba(91,70,229,.09); --accent-line:rgba(91,70,229,.28);
+  --ring:rgba(91,70,229,.5);
+  --ok:#0d9683; --warn:#b07708; --info:#2563eb;
+  --nav-bg:rgba(251,251,253,.78);
+  --grid:rgba(17,19,25,.045);
+  --shadow:0 1px 2px rgba(17,19,25,.04), 0 18px 40px -24px rgba(17,19,25,.22);
+  --shadow-sm:0 1px 2px rgba(17,19,25,.04), 0 8px 20px -14px rgba(17,19,25,.18);
+  --glow-1:rgba(91,70,229,.10); --glow-2:rgba(13,150,131,.09);
+}
 
+/* ---------- base ---------- */
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} .reveal{opacity:1!important;transform:none!important;transition:none!important} }
-body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-img,svg{max-width:100%;display:block}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--bg);color:var(--text);font-family:var(--font);
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:var(--display);margin:0;line-height:1.1;letter-spacing:-.02em;font-weight:600}
+p{margin:0}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--accent)}
-p{margin:0 0 1em}
-h1,h2,h3,h4{margin:0;line-height:1.2;letter-spacing:-.01em}
+img,svg{max-width:100%}
 ul{margin:0;padding:0;list-style:none}
-button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-::selection{background:var(--accent);color:var(--accent-ink)}
+:focus-visible{outline:2px solid var(--ring);outline-offset:3px;border-radius:4px}
+::selection{background:var(--accent-soft);color:var(--text)}
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 clamp(16px,4vw,32px)}
+.mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.02em}
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--accent);color:var(--accent-ink);
+  padding:.7rem 1.1rem;border-radius:0 0 var(--r-s) 0;font-weight:600}
+.skip:focus{left:0}
+.grad-text{background:linear-gradient(96deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent}
 
-.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--accent-ink);padding:.6rem 1rem;border-radius:6px;z-index:100;font-weight:600}
-.skip:focus{left:8px}
-
-.container{width:100%;max-width:1100px;margin:0 auto;padding:0 20px}
-@media (min-width:768px){.container{padding:0 32px}}
-
-.mono{font-family:var(--mono);font-size:.8rem;letter-spacing:.02em}
-.eyebrow{font-family:var(--mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);margin-bottom:.75rem;display:flex;align-items:center;gap:.6rem}
-.eyebrow::before{content:"";width:22px;height:1px;background:var(--accent);display:inline-block}
-.section{padding:72px 0}
-@media (min-width:768px){.section{padding:96px 0}}
-.section-head{margin-bottom:2.25rem;max-width:720px}
-.section-head h2{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:700;margin-bottom:.6rem}
-.section-head p{color:var(--text-2);font-size:1.02rem;margin:0}
-.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border-2),transparent)}
-
-/* nav */
-.nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:saturate(150%) blur(12px);-webkit-backdrop-filter:saturate(150%) blur(12px);border-bottom:1px solid var(--border)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
-.brand .mark{width:34px;height:34px;flex:none;border-radius:8px;border:1px solid var(--border-2);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.74rem;letter-spacing:-.03em;white-space:nowrap;line-height:1;font-weight:600;background:var(--surface)}
-.brand .mark b{color:var(--accent);font-weight:600}
-.brand:hover{color:var(--text)}
-.nav-links{display:none;align-items:center;gap:4px}
-.nav-links a{padding:.45rem .7rem;border-radius:6px;color:var(--text-2);font-size:.93rem;font-weight:500}
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:100;background:var(--nav-bg);backdrop-filter:blur(14px) saturate(160%);
+  -webkit-backdrop-filter:blur(14px) saturate(160%);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;gap:1rem;height:62px}
+.brand{display:flex;align-items:center;gap:.6rem;font-family:var(--display);font-weight:700;letter-spacing:-.025em;
+  font-size:.98rem;margin-right:auto}
+.mark{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;flex:0 0 auto;
+  background:linear-gradient(135deg,var(--a1),var(--a2));color:#0a0b10;font-size:.76rem;font-weight:700;letter-spacing:-.03em}
+.brand .bn{display:none}
+@media (min-width:600px){.brand .bn{display:inline}}
+.nav-links{display:none;gap:.15rem}
+@media (min-width:980px){.nav-links{display:flex}}
+.nav-links a{font-size:.875rem;color:var(--text-2);padding:.45rem .7rem;border-radius:var(--r-xs);font-weight:500;
+  transition:color .18s,background .18s}
 .nav-links a:hover{color:var(--text);background:var(--surface-2)}
-.nav-actions{display:flex;align-items:center;gap:8px}
-.icon-btn{width:38px;height:38px;border-radius:8px;border:1px solid var(--border);display:grid;place-items:center;color:var(--text-2);background:transparent}
-.icon-btn:hover{border-color:var(--border-2);color:var(--text);background:var(--surface)}
-.icon-btn svg{width:18px;height:18px}
+.nav-actions{display:flex;align-items:center;gap:.5rem}
+.icon-btn{width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--border);background:var(--surface);
+  color:var(--text-2);border-radius:var(--r-xs);cursor:pointer;transition:color .18s,border-color .18s,background .18s}
+.icon-btn:hover{color:var(--text);border-color:var(--border-2)}
+.icon-btn svg{width:17px;height:17px}
 .theme-toggle .sun{display:none}
 :root[data-theme="light"] .theme-toggle .sun{display:block}
 :root[data-theme="light"] .theme-toggle .moon{display:none}
 @media (prefers-color-scheme: light){
-  :root:not([data-theme]) .theme-toggle .sun{display:block}
-  :root:not([data-theme]) .theme-toggle .moon{display:none}
+  :root:not([data-theme="dark"]) .theme-toggle .sun{display:block}
+  :root:not([data-theme="dark"]) .theme-toggle .moon{display:none}
 }
 .menu-btn{display:grid}
-@media (min-width:900px){.nav-links{display:flex}.menu-btn{display:none}}
-.mobile-menu{display:none;border-top:1px solid var(--border);background:var(--bg)}
+@media (min-width:980px){.menu-btn{display:none}}
+.mobile-menu{display:none;border-top:1px solid var(--border);background:var(--bg-2);padding:.5rem clamp(16px,4vw,32px) 1rem}
 .mobile-menu.open{display:block}
-.mobile-menu a{display:block;padding:.85rem 20px;border-bottom:1px solid var(--border);color:var(--text-2);font-weight:500}
+@media (min-width:980px){.mobile-menu,.mobile-menu.open{display:none}}
+.mobile-menu a{display:block;padding:.65rem .2rem;color:var(--text-2);font-size:.95rem;font-weight:500;
+  border-bottom:1px solid var(--border)}
 .mobile-menu a:last-child{border-bottom:0}
-@media (min-width:900px){.mobile-menu{display:none!important}}
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.62rem 1.05rem;border-radius:var(--radius-s);font-weight:600;font-size:.92rem;border:1px solid var(--border-2);color:var(--text);background:var(--surface);transition:background .15s,border-color .15s,color .15s,transform .15s;white-space:nowrap;line-height:1.2}
-.btn:hover{border-color:var(--accent);color:var(--text);background:var(--surface-2)}
-.btn svg{width:16px;height:16px;flex:none}
-.btn-primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-.btn-primary:hover{background:var(--accent);color:var(--accent-ink);filter:brightness(1.08)}
-.btn-sm{padding:.42rem .75rem;font-size:.84rem}
-.btn-ghost{border-color:transparent;background:transparent;color:var(--text-2)}
-.btn-ghost:hover{background:var(--surface-2);border-color:transparent}
-.nav .btn-resume{display:none}
-@media (min-width:520px){.nav .btn-resume{display:inline-flex}}
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.72rem 1.15rem;border-radius:var(--r-xs);
+  border:1px solid var(--border-2);background:var(--surface);color:var(--text);font-size:.9rem;font-weight:550;
+  font-family:var(--font);cursor:pointer;transition:transform .18s,border-color .18s,background .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-1px);border-color:var(--accent-line);box-shadow:var(--shadow-sm)}
+.btn svg{width:15px;height:15px;flex:0 0 auto}
+.btn-primary{background:linear-gradient(135deg,var(--a1),var(--a2));color:#0a0b10;border-color:transparent;font-weight:600}
+:root[data-theme="light"] .btn-primary{color:#fff}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .btn-primary{color:#fff}}
+.btn-primary:hover{filter:brightness(1.07)}
+.btn-ghost{background:transparent}
+.btn-sm{padding:.5rem .85rem;font-size:.825rem}
+.ext{width:12px;height:12px;opacity:.65}
 
-/* hero */
-.hero{padding:64px 0 48px;position:relative}
-@media (min-width:900px){.hero{padding:104px 0 72px}}
-.hero-grid{display:grid;gap:40px;align-items:center}
-@media (min-width:900px){.hero-grid{grid-template-columns:minmax(0,1fr) 320px;gap:56px}}
-.hero h1{font-size:clamp(2.1rem,5.5vw,3.4rem);font-weight:700;letter-spacing:-.03em;line-height:1.08;margin:.5rem 0 .9rem}
-.hero h1 .accent{color:var(--accent)}
-.hero .title{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--text-2);font-weight:500;margin-bottom:1.25rem}
-.hero .lede{font-size:1.05rem;color:var(--text-2);max-width:640px;margin-bottom:1.75rem}
-.hero .lede strong{color:var(--text);font-weight:600}
-.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:1.6rem}
-.hero-meta{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;color:var(--muted);font-size:.9rem}
-.hero-meta li{display:inline-flex;align-items:center;gap:.45rem}
-.hero-meta svg{width:15px;height:15px;color:var(--accent)}
-.avatar-card{border:1px solid var(--border);background:var(--surface);border-radius:16px;padding:18px;box-shadow:var(--shadow);max-width:360px;margin:0 auto;width:100%}
-.avatar-card img,.avatar-card .monogram{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;border:1px solid var(--border)}
-.monogram{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(145deg,var(--surface-2,var(--surface)) 0%,var(--bg) 100%);position:relative;overflow:hidden}
-.monogram::before{content:'';position:absolute;inset:-40%;background:radial-gradient(circle at 30% 30%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 55%)}
-.monogram span{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:clamp(64px,9vw,104px);font-weight:700;letter-spacing:-.04em;color:var(--accent);position:relative}
-.monogram small{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);position:relative}
-.avatar-card .card-foot{margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.82rem;color:var(--muted)}
-.avatar-card .card-foot .mono{color:var(--text-2)}
-.socials{display:flex;gap:6px}
-.socials a{width:32px;height:32px;border-radius:7px;border:1px solid var(--border);display:grid;place-items:center;color:var(--text-2)}
-.socials a:hover{border-color:var(--accent);color:var(--accent)}
-.socials svg{width:15px;height:15px}
+/* ---------- hero ---------- */
+.hero{position:relative;padding:clamp(3.2rem,8vw,6rem) 0 clamp(2.4rem,5vw,3.4rem);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:62px 62px;
+  mask-image:radial-gradient(120% 90% at 50% 0%,#000 25%,transparent 78%);
+  -webkit-mask-image:radial-gradient(120% 90% at 50% 0%,#000 25%,transparent 78%)}
+.hero::after{content:"";position:absolute;z-index:0;pointer-events:none;left:50%;top:-38%;transform:translateX(-50%);
+  width:min(1200px,135vw);height:720px;
+  background:radial-gradient(42% 52% at 28% 42%,var(--glow-1),transparent 70%),
+             radial-gradient(38% 46% at 74% 30%,var(--glow-2),transparent 70%);
+  filter:blur(8px)}
+.hero .container{position:relative;z-index:1}
+.hero-grid{display:grid;gap:clamp(2rem,4vw,3.2rem);align-items:center}
+@media (min-width:1000px){.hero-grid{grid-template-columns:1.08fr .92fr}}
 
-/* stats */
+.status{display:inline-flex;align-items:center;gap:.55rem;padding:.38rem .8rem .38rem .62rem;border-radius:999px;
+  border:1px solid var(--border-2);background:var(--surface);font-family:var(--mono);font-size:.73rem;
+  color:var(--text-2);margin-bottom:1.5rem}
+.status .dot{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 22%,transparent)}
+@media (prefers-reduced-motion: no-preference){.status .dot{animation:pulse 2.6s ease-in-out infinite}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+h1{font-size:clamp(2.4rem,7.2vw,4.1rem);font-weight:700;letter-spacing:-.04em;line-height:1.02}
+h1 .nm{display:block}
+h1 .rl{display:block;margin-top:.18em;font-size:clamp(1.25rem,3.4vw,1.85rem);font-weight:600;letter-spacing:-.025em}
+.hero .kicker{margin-top:1.3rem;font-family:var(--display);font-size:clamp(1.02rem,2.3vw,1.3rem);font-weight:500;
+  line-height:1.45;letter-spacing:-.015em;color:var(--text)}
+.hero .lede{margin-top:1rem;color:var(--text-2);font-size:1.0rem;max-width:56ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.8rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.4rem 1.3rem;margin-top:1.5rem;color:var(--muted);font-size:.86rem}
+.hero-meta li{display:flex;align-items:center;gap:.42rem}
+.hero-meta svg{width:14px;height:14px;opacity:.8;flex:0 0 auto}
+.hero-meta a:hover{color:var(--text)}
+
+/* ---------- agent trace card ---------- */
+.trace{border:1px solid var(--border);background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);
+  overflow:hidden}
+.trace-head{display:flex;align-items:center;gap:.55rem;padding:.7rem .95rem;border-bottom:1px solid var(--border);
+  background:var(--surface-2)}
+.trace-head .tdot{width:8px;height:8px;border-radius:50%;background:var(--border-2);flex:0 0 auto}
+.trace-head .ttl{font-family:var(--mono);font-size:.74rem;color:var(--text-2);margin-left:.3rem}
+.trace-head .tag{margin-left:auto;font-family:var(--mono);font-size:.66rem;color:var(--muted);
+  border:1px solid var(--border);border-radius:999px;padding:.12rem .5rem}
+.steps{position:relative;padding:1.05rem .95rem 1.15rem}
+.steps::before{content:"";position:absolute;left:calc(.95rem + 12px);top:1.5rem;bottom:1.6rem;width:2px;
+  background:linear-gradient(180deg,var(--a1),var(--a2));opacity:.4;border-radius:2px}
+@media (prefers-reduced-motion: no-preference){
+  .steps::after{content:"";position:absolute;left:calc(.95rem + 9px);width:8px;height:8px;border-radius:50%;
+    background:var(--a2);box-shadow:0 0 10px 2px color-mix(in srgb,var(--a2) 55%,transparent);
+    animation:flow 4.6s cubic-bezier(.6,.05,.4,.95) infinite}
+}
+@keyframes flow{0%{top:1.3rem;opacity:0}8%{opacity:1}92%{opacity:1}100%{top:calc(100% - 2rem);opacity:0}}
+.step{position:relative;display:grid;grid-template-columns:26px 1fr;gap:.7rem;padding:.42rem 0}
+.step .n{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-family:var(--mono);
+  font-size:.68rem;color:var(--text-2);background:var(--surface-3);border:1px solid var(--border);z-index:1}
+.step.hot .n{background:var(--accent-soft);border-color:var(--accent-line);color:var(--accent)}
+.step .lab{font-family:var(--display);font-size:.9rem;font-weight:600;letter-spacing:-.01em}
+.step .sub{font-family:var(--mono);font-size:.715rem;color:var(--muted);margin-top:.1rem;line-height:1.5}
+.step .sub b{color:var(--text-2);font-weight:500}
+.trace-foot{display:flex;flex-wrap:wrap;gap:.35rem;padding:.75rem .95rem;border-top:1px solid var(--border);
+  background:var(--surface-2)}
+
+/* ---------- chips ---------- */
+.chip{display:inline-block;font-family:var(--mono);font-size:.705rem;padding:.26rem .54rem;border-radius:var(--r-xs);
+  border:1px solid var(--border);background:var(--surface-2);color:var(--text-2);line-height:1.35}
+.chip.hi{border-color:var(--accent-line);background:var(--accent-soft);color:var(--text)}
+.chips{display:flex;flex-wrap:wrap;gap:.35rem}
+
+/* ---------- stats ---------- */
 .stats{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-2)}
 .stats-grid{display:grid;grid-template-columns:repeat(2,1fr)}
-@media (min-width:768px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
-.stat{padding:22px 18px;border-right:1px solid var(--border)}
+@media (min-width:860px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
+.stat{padding:1.5rem 1.1rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
 .stat:nth-child(2n){border-right:0}
-.stat:nth-child(-n+2){border-bottom:1px solid var(--border)}
-@media (min-width:768px){.stat{padding:26px 24px}.stat:nth-child(2n){border-right:1px solid var(--border)}.stat:last-child{border-right:0}.stat:nth-child(-n+2){border-bottom:0}}
-.stat .num{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;letter-spacing:-.03em;color:var(--text);line-height:1.1;font-variant-numeric:tabular-nums}
-.stat .num span{color:var(--accent)}
-.stat .label{color:var(--muted);font-size:.85rem;margin-top:.35rem}
-.stat .src{color:var(--muted);font-size:.74rem;font-family:var(--mono);margin-top:.3rem;opacity:.9}
+.stat:nth-child(n+3){border-bottom:0}
+@media (min-width:860px){
+  .stat{border-bottom:0}
+  .stat:nth-child(2n){border-right:1px solid var(--border)}
+  .stat:last-child{border-right:0}
+}
+.stat .num{font-family:var(--display);font-size:clamp(1.75rem,4.4vw,2.3rem);font-weight:700;letter-spacing:-.04em;
+  line-height:1;background:linear-gradient(96deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent}
+.stat .label{margin-top:.5rem;font-size:.84rem;color:var(--text-2);line-height:1.45}
+.stat .src{margin-top:.3rem;font-family:var(--mono);font-size:.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 
-/* experience */
-.xp{display:grid;gap:28px}
-.job{display:grid;gap:14px;border:1px solid var(--border);background:var(--surface);border-radius:var(--radius);padding:24px 22px}
-@media (min-width:900px){.job{grid-template-columns:240px minmax(0,1fr);gap:32px;padding:30px 32px}}
-.job-meta h3{font-size:1.15rem;font-weight:600;margin-bottom:.2rem}
-.job-meta .co{color:var(--accent);font-weight:600;font-size:.98rem}
-.job-meta .when{color:var(--muted);font-size:.85rem;font-family:var(--mono);margin-top:.5rem}
-.job-meta .where{color:var(--muted);font-size:.85rem;margin-top:.15rem}
-.job-meta .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:.9rem}
-.job ul{display:grid;gap:.55rem;color:var(--text-2);font-size:.96rem}
-.job li{padding-left:1.1rem;position:relative}
-.job li::before{content:"";position:absolute;left:0;top:.66em;width:6px;height:6px;border-radius:2px;background:var(--accent);opacity:.85}
-.job li b{color:var(--text);font-weight:600}
-.edu{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;border:1px solid var(--border);border-radius:var(--radius);padding:18px 22px;background:var(--bg-2);color:var(--text-2);font-size:.95rem}
-.edu .deg{color:var(--text);font-weight:600}
-.edu .mono{color:var(--muted)}
+/* ---------- sections ---------- */
+.section{padding:clamp(3.4rem,7vw,5.6rem) 0}
+.section-head{max-width:68ch;margin-bottom:clamp(1.9rem,4vw,2.8rem)}
+.eyebrow{display:flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.7rem;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--accent);margin-bottom:.85rem}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--accent-line)}
+.section-head h2{font-size:clamp(1.75rem,4.6vw,2.6rem);font-weight:700;letter-spacing:-.035em}
+.section-head p{margin-top:.95rem;color:var(--text-2);font-size:.98rem}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border) 18%,var(--border) 82%,transparent)}
 
-/* chips */
-.chip{display:inline-flex;align-items:center;font-family:var(--mono);font-size:.74rem;line-height:1;padding:.4rem .55rem;border-radius:6px;border:1px solid var(--border);background:var(--bg-2);color:var(--text-2);white-space:nowrap}
-.chip.hi{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+/* ---------- experience ---------- */
+.xp{display:grid;gap:1.1rem}
+.job{border:1px solid var(--border);border-radius:var(--r);background:var(--surface);overflow:hidden;
+  box-shadow:var(--shadow-sm)}
+.job-head{display:grid;gap:.9rem;padding:1.3rem clamp(1.1rem,2.6vw,1.6rem);border-bottom:1px solid var(--border);
+  background:var(--surface-2)}
+@media (min-width:760px){.job-head{grid-template-columns:1fr auto;align-items:start}}
+.job-head h3{font-size:1.2rem;font-weight:600}
+.job-head .co{margin-top:.28rem;font-size:.95rem;color:var(--text);font-weight:550}
+.job-head .co span{color:var(--muted);font-weight:400}
+.job-when{font-family:var(--mono);font-size:.74rem;color:var(--text-2);text-align:left;white-space:nowrap}
+@media (min-width:760px){.job-when{text-align:right}}
+.job-when .wh{display:block;color:var(--muted);margin-top:.22rem}
+.job-body{padding:clamp(1.1rem,2.6vw,1.6rem)}
+.eng{position:relative;padding-left:1.35rem}
+.eng + .eng{margin-top:1.8rem;padding-top:1.8rem;border-top:1px dashed var(--border)}
+.eng::before{content:"";position:absolute;left:0;top:.5rem;bottom:.2rem;width:2px;border-radius:2px;
+  background:linear-gradient(180deg,var(--accent-line),transparent)}
+.eng-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem .8rem;margin-bottom:.4rem}
+.eng-head h4{font-size:1.0rem;font-weight:600;letter-spacing:-.015em}
+.eng-head .dates{font-family:var(--mono);font-size:.7rem;color:var(--muted);border:1px solid var(--border);
+  border-radius:999px;padding:.1rem .52rem;white-space:nowrap}
+.eng .what{color:var(--muted);font-size:.84rem;font-family:var(--mono);margin-bottom:.8rem}
+.eng ul{display:grid;gap:.6rem}
+.eng li{position:relative;padding-left:1.05rem;color:var(--text-2);font-size:.925rem;line-height:1.6}
+.eng li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;
+  background:var(--accent-line)}
+.eng li b{color:var(--text);font-weight:600}
+.eng .tags{margin-top:.95rem}
+.result{display:inline-flex;align-items:center;gap:.3rem;font-family:var(--mono);font-size:.74rem;font-weight:500;
+  color:var(--ok);background:color-mix(in srgb,var(--ok) 10%,transparent);border:1px solid color-mix(in srgb,var(--ok) 30%,transparent);
+  border-radius:var(--r-xs);padding:.1rem .42rem}
+.edu{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1rem;border:1px solid var(--border);
+  border-radius:var(--r);background:var(--surface-2);padding:1rem 1.3rem;font-size:.92rem;color:var(--text-2)}
+.edu .deg{font-family:var(--display);font-weight:600;color:var(--text)}
+.edu .mono{margin-left:auto;color:var(--muted)}
 
-/* projects */
-.projects-grid{display:grid;gap:18px}
-@media (min-width:768px){.projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.card{border:1px solid var(--border);background:var(--surface);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:14px;transition:border-color .2s,transform .2s;position:relative}
-.card:hover{border-color:var(--border-2)}
-.card.flagship{grid-column:1/-1;background:linear-gradient(180deg,var(--surface),var(--bg-2))}
-@media (min-width:768px){.card.flagship{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;padding:28px}}
-.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-.card h3{font-size:1.12rem;font-weight:600;letter-spacing:-.01em}
-.card .value{color:var(--text-2);font-size:.95rem;margin:0}
-.card .inside{display:grid;gap:.45rem;color:var(--text-2);font-size:.9rem}
-.card .inside li{padding-left:1rem;position:relative}
-.card .inside li::before{content:"›";position:absolute;left:0;top:0;color:var(--accent);font-weight:600}
-.card .stack{display:flex;flex-wrap:wrap;gap:6px}
-.card-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:4px}
-.badge{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;padding:.3rem .55rem;border-radius:999px;border:1px solid var(--border-2);color:var(--text-2);white-space:nowrap;flex:none;line-height:1}
-.badge::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
-.badge.live{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 45%,var(--border))}
-.badge.wip{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 45%,var(--border))}
-.badge.demo{color:var(--info);border-color:color-mix(in srgb,var(--info) 45%,var(--border))}
-.badge.done{color:var(--text-2)}
-.flag-right{display:flex;flex-direction:column;gap:14px}
-.flag-right .inside{font-size:.92rem}
-.kv{display:grid;grid-template-columns:auto 1fr;gap:.35rem 1rem;font-size:.85rem;color:var(--text-2);border:1px solid var(--border);border-radius:var(--radius-s);padding:12px 14px;background:var(--bg-2)}
-.kv dt{font-family:var(--mono);color:var(--muted);font-size:.74rem;padding-top:.15rem}
-.kv dd{margin:0}
-.mini{border:1px dashed var(--border-2);border-radius:var(--radius);padding:16px 20px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 16px;color:var(--text-2);font-size:.92rem;background:transparent}
-.mini b{color:var(--text);font-weight:600}
+/* ---------- projects ---------- */
+.projects-grid{display:grid;gap:1.1rem}
+@media (min-width:900px){.projects-grid{grid-template-columns:1fr 1fr;align-items:start}}
+.card{border:1px solid var(--border);border-radius:var(--r);background:var(--surface);padding:clamp(1.2rem,2.6vw,1.6rem);
+  display:flex;flex-direction:column;gap:.85rem;box-shadow:var(--shadow-sm);
+  transition:transform .2s,border-color .2s,box-shadow .2s}
+.card:hover{transform:translateY(-2px);border-color:var(--border-2);box-shadow:var(--shadow)}
+.card.flagship{grid-column:1/-1;display:grid;gap:clamp(1.2rem,3vw,2.2rem)}
+@media (min-width:900px){.card.flagship{grid-template-columns:1.05fr .95fr}}
+.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:.7rem}
+.card-top h3{font-size:1.1rem;font-weight:600;letter-spacing:-.02em}
+.card.flagship .card-top h3{font-size:clamp(1.2rem,2.6vw,1.45rem)}
+.badge{font-family:var(--mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.07em;padding:.22rem .5rem;
+  border-radius:999px;border:1px solid var(--border-2);color:var(--muted);white-space:nowrap;flex:0 0 auto}
+.badge.live{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 38%,transparent);background:color-mix(in srgb,var(--ok) 9%,transparent)}
+.badge.done{color:var(--info);border-color:color-mix(in srgb,var(--info) 38%,transparent);background:color-mix(in srgb,var(--info) 9%,transparent)}
+.badge.demo{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 38%,transparent);background:color-mix(in srgb,var(--warn) 9%,transparent)}
+.card .value{color:var(--text-2);font-size:.925rem;line-height:1.6}
+.metrics{display:flex;flex-wrap:wrap;gap:.6rem}
+.metric{flex:1 1 110px;border:1px solid var(--border);border-radius:var(--r-s);background:var(--surface-2);padding:.65rem .75rem}
+.metric .v{font-family:var(--display);font-size:1.12rem;font-weight:700;letter-spacing:-.03em;line-height:1.15}
+.metric .k{font-family:var(--mono);font-size:.63rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);
+  margin-top:.22rem;line-height:1.4}
+.inside{display:grid;gap:.52rem}
+.inside li{position:relative;padding-left:1.05rem;color:var(--text-2);font-size:.885rem;line-height:1.58}
+.inside li::before{content:"";position:absolute;left:.04rem;top:.6em;width:5px;height:5px;border-radius:1px;
+  background:var(--accent-line);transform:rotate(45deg)}
+.inside li b{color:var(--text);font-weight:600}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:.4rem .9rem;margin:0}
+.kv dt{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);
+  padding-top:.12rem}
+.kv dd{margin:0;font-size:.86rem;color:var(--text-2)}
+.card-links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:auto;padding-top:.3rem}
+.mini{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;
+  border:1px dashed var(--border-2);border-radius:var(--r);padding:1rem 1.3rem;color:var(--text-2);font-size:.9rem}
 
-/* skills */
-.skills-grid{display:grid;gap:14px}
-@media (min-width:700px){.skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (min-width:1000px){.skills-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-.skill-group{border:1px solid var(--border);border-radius:var(--radius);padding:18px 18px 16px;background:var(--surface)}
-.skill-group h3{font-size:.8rem;font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:.85rem;font-weight:500}
-.skill-group .chips{display:flex;flex-wrap:wrap;gap:6px}
+/* ---------- skills ---------- */
+.skills-grid{display:grid;gap:1rem}
+@media (min-width:620px){.skills-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.skills-grid{grid-template-columns:repeat(3,1fr)}}
+.skill-group{border:1px solid var(--border);border-radius:var(--r);background:var(--surface);padding:1.1rem 1.2rem}
+.skill-group h3{font-size:.8rem;font-family:var(--mono);font-weight:500;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--muted);margin-bottom:.8rem}
 
-/* principles */
-.principles{display:grid;gap:14px}
-@media (min-width:768px){.principles{grid-template-columns:repeat(3,minmax(0,1fr))}}
-.principle{border:1px solid var(--border);border-radius:var(--radius);padding:22px;background:var(--surface)}
-.principle .n{font-family:var(--mono);color:var(--accent);font-size:.78rem;margin-bottom:.75rem}
+/* ---------- approach ---------- */
+.principles{display:grid;gap:1rem}
+@media (min-width:700px){.principles{grid-template-columns:1fr 1fr}}
+.principle{position:relative;border:1px solid var(--border);border-radius:var(--r);background:var(--surface);
+  padding:1.4rem 1.4rem 1.5rem;overflow:hidden}
+.principle .n{font-family:var(--mono);font-size:.72rem;color:var(--accent);margin-bottom:.7rem}
 .principle h3{font-size:1.05rem;font-weight:600;margin-bottom:.5rem}
-.principle p{color:var(--text-2);font-size:.93rem;margin:0}
+.principle p{color:var(--text-2);font-size:.9rem;line-height:1.62}
 
-/* notes */
-.notes{display:grid;gap:0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
-.note{padding:20px 22px;border-bottom:1px solid var(--border);display:grid;gap:6px}
-.note:last-child{border-bottom:0}
-@media (min-width:768px){.note{grid-template-columns:170px minmax(0,1fr);gap:20px;padding:22px 26px}}
-.note .tag{font-family:var(--mono);font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;padding-top:.25rem}
-.note h3{font-size:1.02rem;font-weight:600;margin-bottom:.3rem}
-.note p{color:var(--text-2);font-size:.93rem;margin:0}
-.note a{color:var(--accent);text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px}
-.note a:hover{text-decoration-color:currentColor}
+/* ---------- notes ---------- */
+.notes{display:grid;gap:1rem}
+@media (min-width:820px){.notes{grid-template-columns:1fr 1fr}}
+.note{border:1px solid var(--border);border-radius:var(--r);background:var(--surface);padding:1.3rem 1.35rem}
+.note .tag{display:inline-block;font-family:var(--mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--muted);border:1px solid var(--border);border-radius:999px;padding:.15rem .55rem;margin-bottom:.8rem}
+.note h3{font-size:1rem;font-weight:600;margin-bottom:.5rem;letter-spacing:-.015em}
+.note p{color:var(--text-2);font-size:.885rem;line-height:1.62}
+.note a{color:var(--accent);border-bottom:1px solid var(--accent-line)}
+.note a:hover{border-bottom-color:currentColor}
 
-/* contact */
-.contact-box{border:1px solid var(--border);border-radius:16px;background:linear-gradient(180deg,var(--surface),var(--bg-2));padding:32px 24px;display:grid;gap:24px}
-@media (min-width:900px){.contact-box{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);padding:44px 40px;align-items:center}}
-.contact-box h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;margin-bottom:.6rem}
-.contact-box p{color:var(--text-2);margin:0}
-.contact-box>*{min-width:0}
-.contact-list{display:grid;gap:8px;min-width:0}
-.contact-list li{min-width:0}
-.contact-list .lbl{white-space:nowrap}
-.contact-list a{display:flex;align-items:center;gap:12px;min-width:0;border:1px solid var(--border);border-radius:var(--radius-s);padding:.7rem .9rem;background:var(--surface);color:var(--text);font-size:.93rem}
-.contact-list a:hover{border-color:var(--accent)}
-.contact-list svg{width:17px;height:17px;color:var(--accent);flex:none}
-.contact-list .lbl{color:var(--muted);font-size:.78rem;font-family:var(--mono);margin-left:auto}
-.contact-list .val{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1 1 auto}
+/* ---------- contact ---------- */
+.contact-box{position:relative;border:1px solid var(--border);border-radius:var(--r);background:var(--surface);
+  padding:clamp(1.5rem,4vw,2.6rem);display:grid;gap:clamp(1.6rem,4vw,2.6rem);overflow:hidden;box-shadow:var(--shadow)}
+@media (min-width:900px){.contact-box{grid-template-columns:1.05fr .95fr;align-items:center}}
+.contact-box::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(60% 80% at 85% 10%,var(--glow-1),transparent 70%)}
+.contact-box > *{position:relative}
+.contact-box h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;letter-spacing:-.035em}
+.contact-box p{margin-top:.9rem;color:var(--text-2);font-size:.95rem;max-width:46ch}
+.contact-list{display:grid;gap:.6rem}
+.contact-list a{display:flex;align-items:center;gap:.8rem;border:1px solid var(--border);border-radius:var(--r-s);
+  background:var(--surface-2);padding:.85rem 1rem;transition:border-color .18s,transform .18s,background .18s}
+.contact-list a:hover{border-color:var(--accent-line);transform:translateX(2px)}
+.contact-list svg{width:17px;height:17px;color:var(--muted);flex:0 0 auto}
+.contact-list .val{font-size:.9rem;font-weight:500;overflow-wrap:anywhere}
+.contact-list .lbl{margin-left:auto;font-family:var(--mono);font-size:.64rem;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--muted)}
 
-footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted);font-size:.85rem}
-.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;align-items:center}
-.foot a{color:var(--text-2)}
-.foot a:hover{color:var(--accent)}
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--border);padding:1.8rem 0;background:var(--bg-2)}
+.foot{display:flex;flex-wrap:wrap;gap:.6rem 1rem;justify-content:space-between;align-items:center;
+  color:var(--muted);font-size:.82rem}
+.foot a:hover{color:var(--text)}
 
-section[id]{scroll-margin-top:72px}
-@media (max-width:479px){.contact-list .lbl{display:none}}
-@media (max-width:899px){.avatar-card{max-width:300px}}
-html.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
-@media print{html.js .reveal{opacity:1!important;transform:none!important}}
-html.js .reveal.in{opacity:1;transform:none}
-.ext{width:13px;height:13px;opacity:.7}
+/* ---------- reveal ---------- */
+html.js .reveal{opacity:0;transform:translateY(14px)}
+html.js .reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.3,1)}
+@media (prefers-reduced-motion: reduce){html.js .reveal{opacity:1!important;transform:none!important}}
+@media print{
+  html.js .reveal{opacity:1!important;transform:none!important}
+  .nav,.mobile-menu,footer,.hero::before,.hero::after{display:none}
+}
 </style>
 </head>
 <body>
@@ -302,8 +407,9 @@ html.js .reveal.in{opacity:1;transform:none}
 
 <header class="nav" role="banner">
   <div class="container nav-inner">
-    <a class="brand" href="#home" aria-label="Priyanka Bolem home">
-      <span class="mark" aria-hidden="true">P<b>B</b></span>
+    <a class="brand" href="#home" aria-label="Priyanka Bolem, home">
+      <span class="mark" aria-hidden="true">PB</span>
+      <span class="bn">Priyanka Bolem</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#work">Experience</a>
@@ -314,9 +420,9 @@ html.js .reveal.in{opacity:1;transform:none}
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-actions">
-      <a class="btn btn-primary btn-sm btn-resume" href="resume.pdf?v=20260823" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
-        Resume
+      <a class="btn btn-primary btn-sm" href="mailto:priyankabolem93@gmail.com?subject=Hello%20from%20your%20portfolio">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Email me
       </a>
       <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle theme">
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -334,7 +440,6 @@ html.js .reveal.in{opacity:1;transform:none}
     <a href="#approach">Approach</a>
     <a href="#notes">Notes</a>
     <a href="#contact">Contact</a>
-    <a href="resume.pdf?v=20260823" target="_blank" rel="noopener">Resume</a>
   </nav>
 </header>
 
@@ -344,34 +449,59 @@ html.js .reveal.in{opacity:1;transform:none}
   <section class="hero" id="home" aria-labelledby="hero-title">
     <div class="container hero-grid">
       <div>
-        <h1 id="hero-title">Priyanka Bolem<br><span class="accent">Machine Learning Engineer</span></h1>
-        <p class="title">Production ML over high-volume, real-time data: from feature pipelines to monitored endpoints.</p>
-        <p class="lede">ML engineer with 4+ years shipping production models over high-volume real-time data: predictive and probabilistic modeling, uncertainty estimation, and large-scale feature engineering. I own the path to production: low-latency inference on AWS SageMaker, distributed pipelines on Spark, Databricks and Airflow, and monitoring for drift and decay once the model is live. MS in Computer Science, Northwest Missouri State University (May 2025).</p>
+        <div class="status"><span class="dot" aria-hidden="true"></span>Open to ML, AI and Forward Deployed Engineer roles</div>
+        <h1 id="hero-title">
+          <span class="nm">Priyanka Bolem</span>
+          <span class="rl grad-text">Machine Learning Engineer</span>
+        </h1>
+        <p class="kicker">I build agentic AI and RAG systems that run in production, and the MLOps on AWS and GCP that keeps them running.</p>
+        <p class="lede">4.5+ years shipping machine learning: multi-step agent workflows, permission-aware retrieval, MCP tool integrations and LLM evaluation pipelines today; deep learning on healthcare data and credit risk models on high-volume banking data before that. I own the path to production, from feature pipelines to monitored endpoints and retraining. MS in Computer Science, Northwest Missouri State University (May 2025).</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#projects">View projects</a>
-          <a class="btn btn-ghost" href="mailto:priyankabolem93@gmail.com">priyankabolem93@gmail.com</a>
+          <a class="btn btn-ghost" href="#work">Experience</a>
         </div>
         <ul class="hero-meta" aria-label="Location and contact">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Greater Seattle, WA</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+12063056760">+1 206-305-6760</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:priyankabolem93@gmail.com">priyankabolem93@gmail.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"/></svg><a href="https://github.com/priyankabolem" target="_blank" rel="noopener">github.com/priyankabolem</a></li>
         </ul>
       </div>
-      <div class="avatar-card reveal">
-        <!-- To use a photo: replace this div with <img src="me.jpg" width="320" height="320" alt="Portrait of Priyanka Bolem"> -->
-        <div class="monogram" role="img" aria-label="Priyanka Bolem monogram"><span>PB</span></div>
-        <div class="card-foot">
-          <span class="mono">Seattle, WA</span>
-          <div class="socials">
-            <a href="https://github.com/priyankabolem" target="_blank" rel="noopener" aria-label="GitHub profile">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/priyanka-bolem" target="_blank" rel="noopener" aria-label="LinkedIn profile">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg>
-            </a>
-            <a href="https://huggingface.co/Priyabolem" target="_blank" rel="noopener" aria-label="Hugging Face profile">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8"/><circle cx="9" cy="10" r=".6" fill="currentColor"/><circle cx="15" cy="10" r=".6" fill="currentColor"/></svg>
-            </a>
+
+      <!-- agent trace -->
+      <div class="trace reveal" role="img" aria-label="Illustration of an agentic retrieval pipeline: user query, planner, MCP tool calls, permission-aware retrieval, evaluation gate, streamed response.">
+        <div class="trace-head">
+          <span class="tdot" aria-hidden="true"></span><span class="tdot" aria-hidden="true"></span><span class="tdot" aria-hidden="true"></span>
+          <span class="ttl">agent_run.trace</span>
+          <span class="tag">illustrative</span>
+        </div>
+        <div class="steps" aria-hidden="true">
+          <div class="step">
+            <span class="n">01</span>
+            <div><div class="lab">User query</div><div class="sub">natural language, scoped to <b>caller identity</b></div></div>
           </div>
+          <div class="step">
+            <span class="n">02</span>
+            <div><div class="lab">Planner</div><div class="sub">decompose into steps, pick tools, set budget</div></div>
+          </div>
+          <div class="step hot">
+            <span class="n">03</span>
+            <div><div class="lab">Tool calls via MCP</div><div class="sub">typed tools over internal systems, <b>retry and fallback</b></div></div>
+          </div>
+          <div class="step hot">
+            <span class="n">04</span>
+            <div><div class="lab">Permission-aware retrieval</div><div class="sub">ACL filter before rank, <b>no leakage across tenants</b></div></div>
+          </div>
+          <div class="step">
+            <span class="n">05</span>
+            <div><div class="lab">Evaluation gate</div><div class="sub">groundedness, relevance, regression suite in <b>CI</b></div></div>
+          </div>
+          <div class="step">
+            <span class="n">06</span>
+            <div><div class="lab">Streamed response</div><div class="sub">cited, traced, logged for offline scoring</div></div>
+          </div>
+        </div>
+        <div class="trace-foot">
+          <span class="chip hi">Agentic AI</span><span class="chip hi">RAG</span><span class="chip">MCP</span><span class="chip">LLM eval</span><span class="chip">FastAPI</span><span class="chip">AWS</span><span class="chip">GCP</span>
         </div>
       </div>
     </div>
@@ -381,10 +511,10 @@ html.js .reveal.in{opacity:1;transform:none}
   <section class="stats" aria-label="Highlights">
     <div class="container">
       <div class="stats-grid">
-        <div class="stat"><div class="num">4<span>+</span></div><div class="label">years of production ML</div><div class="src">Capgemini · Truveta</div></div>
-        <div class="stat"><div class="num">2</div><div class="label">live demos on Hugging Face Spaces</div><div class="src">FinBERT sentiment · plant disease CNN</div></div>
-        <div class="stat"><div class="num">35<span>%</span></div><div class="label">faster training and data-prep pipelines</div><div class="src">Truveta</div></div>
-        <div class="stat"><div class="num">25<span>%</span></div><div class="label">faster loan decision cycle</div><div class="src">Capgemini</div></div>
+        <div class="stat"><div class="num">4.5<span>+</span></div><div class="label">years shipping production ML and MLOps</div><div class="src">Adisys · Capgemini</div></div>
+        <div class="stat"><div class="num">+22<span>%</span></div><div class="label">chronic disease prediction accuracy</div><div class="src">healthcare client</div></div>
+        <div class="stat"><div class="num">35<span>%</span></div><div class="label">less data-prep and training time</div><div class="src">healthcare client</div></div>
+        <div class="stat"><div class="num">152<span>ms</span></div><div class="label">p95 two-stage search latency on Cloud Run</div><div class="src">grocery-search-vertex</div></div>
       </div>
     </div>
   </section>
@@ -394,50 +524,84 @@ html.js .reveal.in{opacity:1;transform:none}
     <div class="container">
       <div class="section-head reveal">
         <div class="eyebrow">Career</div>
-      <h2 id="work-title">Experience</h2>
-        <p>Healthcare risk modeling at Truveta today; credit, delinquency and fraud models for banking at Capgemini before that. Both roles covered the full path: data, training, deployment, monitoring.</p>
+        <h2 id="work-title">Experience</h2>
+        <p>Agentic AI and RAG for an enterprise collaboration software client today, healthcare prediction on AWS before that, and credit, delinquency and fraud models for banking earlier. Every role covered the full path: data, training, deployment, monitoring.</p>
       </div>
 
       <div class="xp">
         <article class="job reveal">
-          <div class="job-meta">
-            <h3>Machine Learning Engineer</h3>
-            <div class="co">Truveta</div>
-            <div class="when">Jun 2025 - Present</div>
-            <div class="where">Seattle, WA</div>
-            <div class="tags">
-              <span class="chip">SageMaker</span><span class="chip">TensorFlow</span><span class="chip">BERT</span><span class="chip">Bayesian Opt</span><span class="chip">CloudWatch</span>
+          <div class="job-head">
+            <div>
+              <h3>Machine Learning Engineer</h3>
+              <div class="co">Adisys Corporation <span>· consulting, client engagements</span></div>
             </div>
+            <div class="job-when">Jun 2025 &ndash; Present<span class="wh">Greater Seattle, WA</span></div>
           </div>
-          <ul>
-            <li><b>End-to-end ML pipelines on AWS SageMaker</b>: Pipelines for training automation, Endpoints for real-time risk scoring, CloudWatch monitoring and alerting, built to healthcare-data compliance requirements.</li>
-            <li><b>Predictive models in Python/TensorFlow</b> forecasting chronic disease progression from de-identified EHR and demographic data, feeding automated patient stratification.</li>
-            <li><b>Uncertainty quantification</b> with Bayesian Optimization and Monte Carlo simulation across patient cohorts.</li>
-            <li><b>Hybrid optimization framework</b>: Genetic Algorithms for cohort selection plus Reinforcement Learning for adaptive longitudinal strategies, delivering +22% outcome-prediction accuracy and plan efficiency.</li>
-            <li><b>BERT embeddings</b> over lab reports, discharge summaries and medication history to enrich tabular features.</li>
-            <li><b>SQL and pipeline optimization</b> in the cloud data lake, cutting training and data-prep time by 35%.</li>
-            <li><b>Power BI dashboards</b> for incidence trends, treatment efficacy and regional risk.</li>
-          </ul>
+          <div class="job-body">
+
+            <div class="eng">
+              <div class="eng-head">
+                <h4>Enterprise collaboration software client</h4>
+                <span class="dates">Mar 2026 &ndash; Present</span>
+              </div>
+              <p class="what">agentic ai · rag · mcp · llm evaluation</p>
+              <ul>
+                <li><b>Agentic AI assistant</b> for enterprise knowledge work: multi-step agent workflows that decompose a request, select tools, and handle retries and fallbacks when a step fails.</li>
+                <li><b>RAG with permission-aware retrieval</b>, so every answer is grounded only in content the requesting user is allowed to see, with access filtering applied before ranking rather than after.</li>
+                <li><b>MCP tool integrations</b> exposing internal systems to the agent as typed tools, with schema validation and guardrails on each call.</li>
+                <li><b>LLM evaluation pipelines</b>: curated golden datasets, groundedness and relevance scoring, and regression gates that run in CI before a prompt or model change ships.</li>
+                <li><b>Python and FastAPI services</b> for orchestration, streaming responses, tracing and structured logging of every agent run.</li>
+              </ul>
+              <div class="chips tags">
+                <span class="chip hi">Agentic workflows</span><span class="chip hi">RAG</span><span class="chip">MCP</span><span class="chip">LLM eval</span><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Vector search</span>
+              </div>
+            </div>
+
+            <div class="eng">
+              <div class="eng-head">
+                <h4>Healthcare data platform client</h4>
+                <span class="dates">Jun 2025 &ndash; Feb 2026</span>
+              </div>
+              <p class="what">deep learning · clinical nlp · sagemaker</p>
+              <ul>
+                <li><b>Chronic disease progression prediction</b> on de-identified EHR and demographic data with TensorFlow, feeding automated patient stratification. <span class="result">+22% prediction accuracy</span></li>
+                <li><b>BERT embeddings</b> over lab reports, discharge summaries and medication history, used to enrich tabular clinical features.</li>
+                <li><b>SageMaker Pipelines and Endpoints</b> for training automation and real-time scoring, with CloudWatch monitoring and alerting, built to healthcare data compliance requirements.</li>
+                <li><b>SQL and pipeline optimization</b> across the cloud data lake. <span class="result">-35% data-prep time</span></li>
+                <li><b>Uncertainty quantification</b> with Bayesian Optimization and Monte Carlo simulation across patient cohorts, so risk scores shipped with confidence intervals.</li>
+              </ul>
+              <div class="chips tags">
+                <span class="chip hi">TensorFlow</span><span class="chip hi">SageMaker</span><span class="chip">BERT</span><span class="chip">Bayesian Opt</span><span class="chip">Monte Carlo</span><span class="chip">CloudWatch</span><span class="chip">SQL</span>
+              </div>
+            </div>
+
+          </div>
         </article>
 
         <article class="job reveal">
-          <div class="job-meta">
-            <h3>Machine Learning Engineer</h3>
-            <div class="co">Capgemini</div>
-            <div class="when">Apr 2019 - Nov 2022</div>
-            <div class="where">India</div>
-            <div class="tags">
-              <span class="chip">XGBoost</span><span class="chip">LightGBM</span><span class="chip">Databricks</span><span class="chip">Airflow</span><span class="chip">Tableau</span>
+          <div class="job-head">
+            <div>
+              <h3>Machine Learning Engineer</h3>
+              <div class="co">Capgemini <span>· banking and financial services</span></div>
+            </div>
+            <div class="job-when">Apr 2019 &ndash; Nov 2022<span class="wh">India</span></div>
+          </div>
+          <div class="job-body">
+            <div class="eng">
+              <p class="what">credit risk · fraud · distributed pipelines</p>
+              <ul>
+                <li><b>Credit default, loan delinquency and fraudulent-claims models</b> (Scikit-learn, XGBoost, LightGBM) embedded into origination, collections and fraud-triage workflows. <span class="result">-25% loan decision cycle time</span></li>
+                <li><b>Feature engineering</b> over financial, credit-bureau and behavioral data.</li>
+                <li><b>Automated ETL in Python and SQL</b> across core banking, bureau and CRM sources. <span class="result">-40% data-prep time</span></li>
+                <li><b>Distributed training on Azure Databricks</b> and Airflow orchestration for scheduled retraining and batch inference.</li>
+                <li><b>Model performance monitoring</b>: accuracy, drift and alert thresholds. <span class="result">-20% false positives</span></li>
+                <li><b>Tableau dashboards</b> for risk and operations stakeholders. <span class="result">+18% reporting efficiency</span></li>
+              </ul>
+              <div class="chips tags">
+                <span class="chip hi">XGBoost</span><span class="chip">LightGBM</span><span class="chip">Scikit-learn</span><span class="chip">Databricks</span><span class="chip">Airflow</span><span class="chip">SQL</span><span class="chip">Tableau</span>
+              </div>
             </div>
           </div>
-          <ul>
-            <li><b>Credit default, loan delinquency and fraudulent-claims models</b> (Scikit-learn, XGBoost, LightGBM) embedded into origination, collections and fraud-triage workflows, loan decision cycle time down 25%.</li>
-            <li><b>Feature engineering</b> over financial, credit-bureau and behavioral data.</li>
-            <li><b>Automated ETL in Python + SQL</b> across core banking, bureau and CRM sources (−40% data-prep time); distributed training on Azure Databricks.</li>
-            <li><b>Airflow orchestration</b> for scheduled retraining and batch inference.</li>
-            <li><b>Model performance monitoring</b>: accuracy, drift, alert thresholds; reducing false positives by 20%.</li>
-            <li><b>Tableau dashboards</b> for risk and operations stakeholders (+18% reporting efficiency).</li>
-          </ul>
         </article>
 
         <div class="edu reveal">
@@ -456,40 +620,40 @@ html.js .reveal.in{opacity:1;transform:none}
     <div class="container">
       <div class="section-head reveal">
         <div class="eyebrow">Selected work</div>
-      <h2 id="projects-title">Projects</h2>
-        <p>Public, reproducible builds of the same patterns I use at work: a model is only done when it is served, monitored and retrainable. Status labels are honest.</p>
+        <h2 id="projects-title">Projects</h2>
+        <p>Public, reproducible builds of the same patterns I use at work: a model is only done when it is served, monitored and retrainable. Status labels are honest about what is production-trained and what is not.</p>
       </div>
 
       <div class="projects-grid">
 
-        <!-- 1 flagship -->
+        <!-- 1 financial sentiment -->
         <article class="card flagship reveal">
           <div>
             <div class="card-top">
               <h3>Financial Sentiment MLOps Platform</h3>
               <span class="badge live">Live demo</span>
             </div>
-            <p class="value" style="margin-top:.5rem">End-to-end sentiment platform for financial text: FinBERT fine-tuning, multi-source ingestion, a versioned training loop, a containerized API, and production monitoring, the full lifecycle in one repo.</p>
-            <dl class="kv" style="margin-top:14px">
+            <p class="value" style="margin-top:.6rem">End-to-end sentiment platform for financial text: FinBERT fine-tuning, multi-source ingestion, a versioned training loop, a containerized API and production monitoring, the full lifecycle in one repository.</p>
+            <dl class="kv" style="margin-top:1.1rem">
               <dt>model</dt><dd>FinBERT fine-tune (Hugging Face Transformers)</dd>
               <dt>ingest</dt><dd>News API · Alpha Vantage · Reddit</dd>
-              <dt>serve</dt><dd>FastAPI · Docker multi-stage · Kubernetes HPA</dd>
-              <dt>observe</dt><dd>Prometheus/Grafana · Evidently drift reports</dd>
-              <dt>ci/cd</dt><dd>GitHub Actions · pytest unit + integration</dd>
+              <dt>serve</dt><dd>FastAPI · multi-stage Docker · Kubernetes HPA</dd>
+              <dt>observe</dt><dd>Prometheus / Grafana · Evidently drift reports</dd>
+              <dt>ci/cd</dt><dd>GitHub Actions · pytest unit and integration</dd>
             </dl>
-            <div class="card-links" style="margin-top:16px">
+            <div class="card-links" style="margin-top:1.2rem">
               <a class="btn btn-sm btn-primary" href="https://huggingface.co/spaces/Priyabolem/financial-sentiment-analysis" target="_blank" rel="noopener">Live demo <svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
               <a class="btn btn-sm" href="https://github.com/priyankabolem/financial-sentiment-mlops" target="_blank" rel="noopener">GitHub <svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
             </div>
           </div>
-          <div class="flag-right">
+          <div>
             <ul class="inside">
               <li>Training pipeline versioned with <b>DVC</b>; experiments and model registry in <b>MLflow</b>.</li>
               <li>Inference service in <b>FastAPI</b> built as a multi-stage Docker image, with <b>Kubernetes</b> manifests including a Horizontal Pod Autoscaler.</li>
               <li>Runtime metrics exported to <b>Prometheus</b> with Grafana dashboards; data and prediction drift tracked with <b>Evidently</b>.</li>
               <li><b>GitHub Actions</b> CI/CD runs unit and integration tests with pytest on every push; deployed as a Hugging Face Space.</li>
             </ul>
-            <div class="stack">
+            <div class="chips" style="margin-top:1.1rem">
               <span class="chip hi">FinBERT</span><span class="chip">Transformers</span><span class="chip">DVC</span><span class="chip">MLflow</span><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">Evidently</span><span class="chip">GitHub Actions</span><span class="chip">pytest</span>
             </div>
           </div>
@@ -499,25 +663,57 @@ html.js .reveal.in{opacity:1;transform:none}
         <article class="card reveal">
           <div class="card-top">
             <h3>Credit Card Fraud Detection: Production MLOps</h3>
-            <span class="badge live">Complete</span>
+            <span class="badge done">Complete</span>
           </div>
-          <p class="value">Fraud scoring on a 1:578-imbalanced dataset (284,807 transactions, 0.17% fraud), built the way production systems are evaluated: a chronological split, AUPRC-driven selection, and an operating threshold set by a precision budget.</p>
+          <p class="value">Fraud scoring on a 1:578 imbalanced dataset (284,807 transactions, 0.17% fraud), built the way production systems are evaluated: a chronological split, AUPRC-driven selection and an operating threshold set by a precision budget.</p>
+          <div class="metrics">
+            <div class="metric"><div class="v">0.765</div><div class="k">test AUPRC vs 0.718 baseline</div></div>
+            <div class="metric"><div class="v">0.979</div><div class="k">test ROC-AUC</div></div>
+            <div class="metric"><div class="v">0.90</div><div class="k">precision budget at threshold</div></div>
+          </div>
           <ul class="inside">
-            <li>XGBoost vs a logistic baseline on a chronological 70/15/15 split: test AUPRC 0.765 vs 0.718, ROC-AUC 0.979; threshold frozen on validation for a 0.90 precision budget.</li>
+            <li>XGBoost against a logistic baseline on a chronological 70/15/15 split; the threshold is frozen on validation, not tuned on test.</li>
             <li>MLflow experiment tracking; the served artifact ships with its threshold, metrics and data checksum.</li>
-            <li>FastAPI scoring service (single-digit millisecond latency), Dockerized, health and latency reporting.</li>
-            <li>PSI drift monitoring implemented from scratch; it flags the day-over-day feature shift (PSI 1.57 on V1) that explains the validation-to-test precision drop.</li>
-            <li>Ten tests run in CI on a synthetic model, so the pipeline never needs the 144 MB dataset.</li>
+            <li>FastAPI scoring service at single-digit millisecond latency, Dockerized, with health and latency reporting.</li>
+            <li><b>PSI drift monitoring</b> written from scratch; it flags the day-over-day feature shift (PSI 1.57 on V1) that explains the validation to test precision drop.</li>
+            <li>Ten tests run in CI against a synthetic model, so the pipeline never needs the 144 MB dataset.</li>
           </ul>
-          <div class="stack">
-            <span class="chip hi">XGBoost</span><span class="chip">MLflow</span><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">PSI drift monitoring</span><span class="chip">GitHub Actions</span><span class="chip">pytest</span>
+          <div class="chips">
+            <span class="chip hi">XGBoost</span><span class="chip">MLflow</span><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">PSI drift</span><span class="chip">GitHub Actions</span><span class="chip">pytest</span>
           </div>
           <div class="card-links">
             <a class="btn btn-sm" href="https://github.com/priyankabolem/fraud-detection-mlops" target="_blank" rel="noopener">GitHub <svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
           </div>
         </article>
 
-        <!-- 3 RAG -->
+        <!-- 3 grocery search on GCP -->
+        <article class="card reveal">
+          <div class="card-top">
+            <h3>Grocery Product Search and Re-ranking on GCP</h3>
+            <span class="badge done">Complete</span>
+          </div>
+          <p class="value">Two-stage retrieval over a 9,162 product grocery catalog: Vertex AI Search retrieves candidates for a text query, a gradient boosting model on a Vertex AI endpoint re-ranks them by predicted reorder propensity, and a FastAPI service on Cloud Run blends both signals.</p>
+          <div class="metrics">
+            <div class="metric"><div class="v">152 ms</div><div class="k">p95 search latency, Cloud Run</div></div>
+            <div class="metric"><div class="v">27%</div><div class="k">lower test MAE than baseline</div></div>
+            <div class="metric"><div class="v">9,162</div><div class="k">products indexed</div></div>
+          </div>
+          <ul class="inside">
+            <li>Catalog built from Instacart order data in <b>BigQuery</b> and Cloud Storage, then indexed as a structured <b>Vertex AI Search</b> data store with a filterable department facet.</li>
+            <li>Re-ranker trained and registered in the <b>Vertex AI Model Registry</b>, served from an endpoint, scored in one batched call per request.</li>
+            <li>Final ranking blends retrieval rank and model score (0.7 / 0.3, configurable), so relevance leads and habitually re-bought items get lifted when relevance is close.</li>
+            <li><b>Graceful degradation</b>: if the endpoint is missing or a prediction fails, the API logs it and returns retrieval order with <code class="mono">reranked: false</code> instead of failing the request.</li>
+            <li>Non-root Docker image on <b>Cloud Run</b>, pure-pandas feature and ranking modules unit tested, lint and tests in GitHub Actions.</li>
+          </ul>
+          <div class="chips">
+            <span class="chip hi">Vertex AI Search</span><span class="chip hi">Vertex AI Endpoints</span><span class="chip">BigQuery</span><span class="chip">Cloud Run</span><span class="chip">Cloud Storage</span><span class="chip">Scikit-learn</span><span class="chip">FastAPI</span><span class="chip">Docker</span>
+          </div>
+          <div class="card-links">
+            <a class="btn btn-sm" href="https://github.com/priyankabolem/grocery-search-vertex" target="_blank" rel="noopener">GitHub <svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          </div>
+        </article>
+
+        <!-- 4 RAG -->
         <article class="card reveal">
           <div class="card-top">
             <h3>RAG Chatbot with Knowledge Graph Retrieval</h3>
@@ -525,12 +721,12 @@ html.js .reveal.in{opacity:1;transform:none}
           </div>
           <p class="value">Question answering over university information using hybrid retrieval: a Neo4j knowledge graph for structured relationships plus OpenAI embeddings for semantic search, orchestrated with LangChain.</p>
           <ul class="inside">
-            <li>Graph + vector retrieval: entity/relationship lookups in Neo4j combined with embedding similarity.</li>
-            <li>LangChain chains for retrieval, context assembly and grounded generation.</li>
-            <li>Streamlit front end deployed on Streamlit Community Cloud (free tier, may be asleep on first load).</li>
+            <li>Graph and vector retrieval together: entity and relationship lookups in <b>Neo4j</b> combined with embedding similarity.</li>
+            <li><b>LangChain</b> chains for retrieval, context assembly and grounded generation.</li>
+            <li>Streamlit front end on Streamlit Community Cloud (free tier, so it may be asleep on first load).</li>
           </ul>
-          <div class="stack">
-            <span class="chip hi">Neo4j</span><span class="chip">OpenAI embeddings</span><span class="chip">LangChain</span><span class="chip">Streamlit</span><span class="chip">RAG</span>
+          <div class="chips">
+            <span class="chip hi">Neo4j</span><span class="chip hi">RAG</span><span class="chip">OpenAI embeddings</span><span class="chip">LangChain</span><span class="chip">Streamlit</span>
           </div>
           <div class="card-links">
             <a class="btn btn-sm btn-primary" href="https://nwmsu-rag-chatbot.streamlit.app" target="_blank" rel="noopener">Live demo <svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
@@ -538,7 +734,32 @@ html.js .reveal.in{opacity:1;transform:none}
           </div>
         </article>
 
-        <!-- 4 plant -->
+        <!-- 5 lending club -->
+        <article class="card reveal">
+          <div class="card-top">
+            <h3>Lending Club Loan Default Prediction</h3>
+            <span class="badge done">Complete</span>
+          </div>
+          <p class="value">Default-risk modeling on roughly 38k Lending Club loans at a 1:5.8 class imbalance, judged on ranking quality and the chosen operating threshold rather than raw accuracy.</p>
+          <div class="metrics">
+            <div class="metric"><div class="v">&gt; 0.85</div><div class="k">ROC-AUC, held-out loans</div></div>
+            <div class="metric"><div class="v">1:5.8</div><div class="k">default class imbalance</div></div>
+          </div>
+          <ul class="inside">
+            <li><b>ROC-AUC above 0.85</b> on held-out data, with Logistic Regression, Decision Tree, Random Forest and XGBoost compared side by side on the same split; gradient boosting gives the best true positive rate at a fixed false positive rate.</li>
+            <li><b>Threshold selection, not default 0.5</b>: precision and recall reported at the operating point a lender would actually approve on, so the cost of a missed default is explicit.</li>
+            <li>Class-imbalance treatment across the 32k repaid against 5.5k defaulted loans.</li>
+            <li>Feature engineering over borrower, loan and credit-bureau attributes, with grade-level default rates (roughly 95% repayment at grade A, 67% at grade G) as a sanity check on the model.</li>
+          </ul>
+          <div class="chips">
+            <span class="chip hi">XGBoost</span><span class="chip">Random Forest</span><span class="chip">Scikit-learn</span><span class="chip">Pandas</span><span class="chip">Threshold tuning</span>
+          </div>
+          <div class="card-links">
+            <a class="btn btn-sm" href="https://github.com/priyankabolem/lendingclub-loan-default-prediction" target="_blank" rel="noopener">GitHub <svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          </div>
+        </article>
+
+        <!-- 6 plant -->
         <article class="card reveal">
           <div class="card-top">
             <h3>Plant Disease Detection</h3>
@@ -546,11 +767,11 @@ html.js .reveal.in{opacity:1;transform:none}
           </div>
           <p class="value">Custom CNN that classifies leaf images across 38 disease classes and 14 plant species, with Grad-CAM heatmaps so predictions can be inspected, packaged with Docker and CI. Shipped as an architecture showcase: the published weights are demo weights pending a full training run.</p>
           <ul class="inside">
-            <li>TensorFlow/Keras CNN, 38 classes over 14 species; Grad-CAM visual explanations per prediction.</li>
-            <li>Dockerized inference app with GitHub Actions CI; live on Hugging Face Spaces.</li>
-            <li>Repo carries an explicit MODEL_STATUS note: architecture and pipeline are complete, weights are not production-trained.</li>
+            <li>TensorFlow and Keras CNN, 38 classes over 14 species, with Grad-CAM visual explanations per prediction.</li>
+            <li>Dockerized inference app with GitHub Actions CI, live on Hugging Face Spaces.</li>
+            <li>The repository carries an explicit MODEL_STATUS note: architecture and pipeline are complete, weights are not production-trained.</li>
           </ul>
-          <div class="stack">
+          <div class="chips">
             <span class="chip hi">TensorFlow</span><span class="chip">Keras</span><span class="chip">CNN</span><span class="chip">Grad-CAM</span><span class="chip">Docker</span><span class="chip">CI</span>
           </div>
           <div class="card-links">
@@ -559,27 +780,7 @@ html.js .reveal.in{opacity:1;transform:none}
           </div>
         </article>
 
-        <!-- 5 lending -->
-        <article class="card reveal">
-          <div class="card-top">
-            <h3>Lending Club Loan Default Prediction</h3>
-            <span class="badge done">Complete</span>
-          </div>
-          <p class="value">Default-risk modeling on ~38k Lending Club loans, comparing Logistic Regression, Decision Tree, Random Forest and XGBoost with explicit handling for class imbalance and decision-threshold tuning.</p>
-          <ul class="inside">
-            <li>~84% accuracy and ROC-AUC above 0.85 on held-out data; model comparison reported side by side.</li>
-            <li>Class-imbalance treatment and threshold tuning aimed at the operating point a lender cares about.</li>
-            <li>Feature engineering over borrower, loan and credit attributes.</li>
-          </ul>
-          <div class="stack">
-            <span class="chip hi">XGBoost</span><span class="chip">Random Forest</span><span class="chip">Scikit-learn</span><span class="chip">Pandas</span>
-          </div>
-          <div class="card-links">
-            <a class="btn btn-sm" href="https://github.com/priyankabolem/lendingclub-loan-default-prediction" target="_blank" rel="noopener">GitHub <svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-          </div>
-        </article>
-
-        <!-- 6 nutriguide -->
+        <!-- 7 nutriguide -->
         <article class="card reveal">
           <div class="card-top">
             <h3>NutriGuide+</h3>
@@ -589,9 +790,9 @@ html.js .reveal.in{opacity:1;transform:none}
           <ul class="inside">
             <li>TensorFlow image classifier for food recognition.</li>
             <li>Nutrition insight layer keyed off the predicted class.</li>
-            <li>Streamlit UI for upload → prediction → guidance.</li>
+            <li>Streamlit UI for upload, prediction and guidance.</li>
           </ul>
-          <div class="stack">
+          <div class="chips">
             <span class="chip hi">TensorFlow</span><span class="chip">Computer vision</span><span class="chip">Streamlit</span>
           </div>
           <div class="card-links">
@@ -599,9 +800,8 @@ html.js .reveal.in{opacity:1;transform:none}
           </div>
         </article>
 
-        <!-- mini -->
-        <div class="mini reveal" style="grid-column:1/-1">
-          <span>Six public repositories, each with a README that states what is built and what is still in progress.</span>
+        <div class="mini reveal">
+          <span>Seven public repositories, each with a README that states what is built and what is still in progress.</span>
           <a class="btn btn-sm btn-ghost" href="https://github.com/priyankabolem?tab=repositories" target="_blank" rel="noopener">All repositories <svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
         </div>
 
@@ -616,46 +816,52 @@ html.js .reveal.in{opacity:1;transform:none}
     <div class="container">
       <div class="section-head reveal">
         <div class="eyebrow">Toolkit</div>
-      <h2 id="skills-title">Skills</h2>
+        <h2 id="skills-title">Skills</h2>
         <p>Grouped by where they sit in the lifecycle. Highlighted items are the ones I reach for daily.</p>
       </div>
       <div class="skills-grid">
+        <div class="skill-group reveal"><h3>Agentic AI / LLM</h3><div class="chips"><span class="chip hi">Agent workflows</span><span class="chip hi">RAG</span><span class="chip hi">MCP tool integration</span><span class="chip hi">LLM evaluation</span><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">Prompt and context design</span><span class="chip">Permission-aware retrieval</span></div></div>
+        <div class="skill-group reveal"><h3>Models / Embeddings</h3><div class="chips"><span class="chip hi">BERT / FinBERT</span><span class="chip">OpenAI embeddings</span><span class="chip">GPT-4 class LLMs</span><span class="chip">LLaMA</span><span class="chip">Vector databases</span><span class="chip">Neo4j</span><span class="chip">Hybrid retrieval</span><span class="chip">Re-ranking</span></div></div>
         <div class="skill-group reveal"><h3>Languages</h3><div class="chips"><span class="chip hi">Python</span><span class="chip hi">SQL</span><span class="chip">R</span></div></div>
         <div class="skill-group reveal"><h3>ML / DL</h3><div class="chips"><span class="chip hi">PyTorch</span><span class="chip hi">TensorFlow</span><span class="chip">Keras</span><span class="chip hi">Scikit-learn</span><span class="chip hi">XGBoost</span><span class="chip">LightGBM</span><span class="chip">HF Transformers</span><span class="chip">OpenCV</span></div></div>
-        <div class="skill-group reveal"><h3>Modeling</h3><div class="chips"><span class="chip">Bayesian Optimization</span><span class="chip">Monte Carlo</span><span class="chip">Genetic Algorithms</span><span class="chip">Reinforcement Learning</span><span class="chip">Calibration</span><span class="chip">Uncertainty estimation</span></div></div>
-        <div class="skill-group reveal"><h3>GenAI / NLP</h3><div class="chips"><span class="chip hi">BERT / FinBERT</span><span class="chip">LLaMA</span><span class="chip">GPT-4</span><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip hi">RAG</span><span class="chip">Vector DBs</span><span class="chip">Neo4j</span></div></div>
-        <div class="skill-group reveal"><h3>Data / Pipelines</h3><div class="chips"><span class="chip hi">Spark</span><span class="chip">Kafka</span><span class="chip hi">Airflow</span><span class="chip">Databricks</span><span class="chip">DVC</span><span class="chip">ETL</span></div></div>
-        <div class="skill-group reveal"><h3>MLOps</h3><div class="chips"><span class="chip hi">SageMaker Pipelines / Endpoints</span><span class="chip hi">MLflow</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">FastAPI</span><span class="chip">GitHub Actions</span><span class="chip">Evidently</span><span class="chip">Prometheus / Grafana</span><span class="chip">CloudWatch</span></div></div>
-        <div class="skill-group reveal"><h3>Cloud</h3><div class="chips"><span class="chip hi">AWS SageMaker</span><span class="chip">Lambda</span><span class="chip">EC2</span><span class="chip">ECS</span><span class="chip">S3</span><span class="chip">Azure ML Studio</span><span class="chip">Azure Databricks</span></div></div>
-        <div class="skill-group reveal"><h3>Visualization</h3><div class="chips"><span class="chip">Tableau</span><span class="chip">Power BI</span><span class="chip">Plotly</span></div></div>
+        <div class="skill-group reveal"><h3>MLOps</h3><div class="chips"><span class="chip hi">FastAPI</span><span class="chip hi">Docker</span><span class="chip hi">MLflow</span><span class="chip">Kubernetes</span><span class="chip">GitHub Actions</span><span class="chip">DVC</span><span class="chip">Evidently</span><span class="chip">Prometheus / Grafana</span></div></div>
+        <div class="skill-group reveal"><h3>AWS</h3><div class="chips"><span class="chip hi">SageMaker Pipelines</span><span class="chip hi">SageMaker Endpoints</span><span class="chip">Lambda</span><span class="chip">ECS</span><span class="chip">EC2</span><span class="chip">S3</span><span class="chip">CloudWatch</span></div></div>
+        <div class="skill-group reveal"><h3>Google Cloud</h3><div class="chips"><span class="chip hi">Vertex AI Search</span><span class="chip hi">Vertex AI Endpoints</span><span class="chip">Vertex AI Model Registry</span><span class="chip hi">BigQuery</span><span class="chip">Cloud Run</span><span class="chip">Cloud Storage</span></div></div>
+        <div class="skill-group reveal"><h3>Data / Pipelines</h3><div class="chips"><span class="chip hi">Spark</span><span class="chip hi">Airflow</span><span class="chip">Databricks</span><span class="chip">Kafka</span><span class="chip">ETL</span><span class="chip">Feature engineering</span></div></div>
+        <div class="skill-group reveal"><h3>Modeling / Analysis</h3><div class="chips"><span class="chip">Bayesian Optimization</span><span class="chip">Monte Carlo</span><span class="chip">Calibration</span><span class="chip">Uncertainty estimation</span><span class="chip">Tableau</span><span class="chip">Power BI</span><span class="chip">Plotly</span></div></div>
       </div>
     </div>
   </section>
 
   <div class="divider" role="presentation"></div>
 
-  <!-- PRINCIPLES -->
+  <!-- APPROACH -->
   <section class="section" id="approach" aria-labelledby="principles-title">
     <div class="container">
       <div class="section-head reveal">
         <div class="eyebrow">How I work</div>
-      <h2 id="principles-title">Approach</h2>
+        <h2 id="principles-title">Approach</h2>
       </div>
       <div class="principles">
         <div class="principle reveal">
           <div class="n">01</div>
-          <h3>Metrics before models</h3>
-          <p>Agree on the business metric and the evaluation metric that tracks it before touching a model. Fraud at 0.17% prevalence is an AUPRC problem, not an accuracy problem; a loan model is judged at its operating threshold.</p>
+          <h3>Evals before prompts</h3>
+          <p>An agent without an evaluation suite is a demo. I start from a golden dataset and the scores that matter, groundedness, relevance, task success, then gate prompt and model changes on them in CI so a regression is caught before a user finds it.</p>
         </div>
         <div class="principle reveal">
           <div class="n">02</div>
-          <h3>Monitoring is part of the model</h3>
-          <p>A model ships with its drift checks, alert thresholds and retraining trigger, not after. Evidently, CloudWatch and Prometheus are in the first PR, not the last.</p>
+          <h3>Permissions are part of retrieval</h3>
+          <p>In an enterprise, who is asking changes what the right answer is. Access filtering belongs in the retrieval path, applied before ranking, not as a post-filter on text the model has already seen.</p>
         </div>
         <div class="principle reveal">
           <div class="n">03</div>
-          <h3>Reproducible by default</h3>
-          <p>Versioned data (DVC), tracked experiments and a registry (MLflow), pinned environments, and CI that runs the tests. If a result cannot be rebuilt from the repo, it is not done.</p>
+          <h3>Metrics before models</h3>
+          <p>Agree on the business metric and the evaluation metric that tracks it before touching a model. Fraud at 0.17% prevalence is an AUPRC problem, not an accuracy problem, and a loan model is judged at its operating threshold.</p>
+        </div>
+        <div class="principle reveal">
+          <div class="n">04</div>
+          <h3>Monitoring and reproducibility ship together</h3>
+          <p>A model goes out with its drift checks, alert thresholds and retraining trigger, plus versioned data, tracked experiments, pinned environments and CI that runs the tests. If a result cannot be rebuilt from the repository, it is not done.</p>
         </div>
       </div>
     </div>
@@ -668,30 +874,29 @@ html.js .reveal.in{opacity:1;transform:none}
     <div class="container">
       <div class="section-head reveal">
         <div class="eyebrow">Writing</div>
-      <h2 id="notes-title">Notes</h2>
-        <p>Brief write-ups drawn from the projects above.</p>
+        <h2 id="notes-title">Notes</h2>
+        <p>Brief write-ups drawn from the work above.</p>
       </div>
-      <div class="notes reveal">
-        <article class="note">
+      <div class="notes">
+        <article class="note reveal">
+          <div class="tag">Agents</div>
+          <h3>Filter before you rank, not after</h3>
+          <p>The tempting way to add permissions to RAG is to retrieve broadly and drop anything the user cannot see from the final answer. That quietly degrades quality: the top k is consumed by documents that get thrown away, so a permitted but lower-scoring answer never makes it into context. Pushing the access filter into the retrieval query keeps the whole budget on content the caller is allowed to read.</p>
+        </article>
+        <article class="note reveal">
           <div class="tag">Evaluation</div>
-          <div>
-            <h3>Why AUPRC, not ROC-AUC, for 0.17% fraud</h3>
-            <p>At 0.17% fraud in 284,807 transactions, ROC-AUC stays flattering even when precision collapses, because the huge negative class dominates the false-positive rate. Precision-recall is the curve a fraud-ops team actually lives on, so the fraud pipeline selects and tunes models on AUPRC. See <a href="https://github.com/priyankabolem/fraud-detection-mlops" target="_blank" rel="noopener">fraud-detection-mlops</a>.</p>
-          </div>
+          <h3>Why AUPRC, not ROC-AUC, for 0.17% fraud</h3>
+          <p>At 0.17% fraud in 284,807 transactions, ROC-AUC stays flattering even when precision collapses, because the huge negative class dominates the false-positive rate. Precision and recall is the curve a fraud-ops team actually lives on, so the pipeline selects and tunes on AUPRC. See <a href="https://github.com/priyankabolem/fraud-detection-mlops" target="_blank" rel="noopener">fraud-detection-mlops</a>.</p>
         </article>
-        <article class="note">
-          <div class="tag">Monitoring</div>
-          <div>
-            <h3>Drift reports as a CI artifact</h3>
-            <p>In the sentiment platform, Evidently drift reports sit next to the Prometheus/Grafana runtime metrics and the GitHub Actions test suite, rather than being a separate notebook someone remembers to run, the point is that a distribution shift is visible before it becomes a quality incident. See <a href="https://github.com/priyankabolem/financial-sentiment-mlops" target="_blank" rel="noopener">financial-sentiment-mlops</a>.</p>
-          </div>
-        </article>
-        <article class="note">
+        <article class="note reveal">
           <div class="tag">Retrieval</div>
-          <div>
-            <h3>Graph + vector retrieval for structured domains</h3>
-            <p>University data has explicit relationships (program → department → requirement) that pure embedding search flattens. The chatbot pairs a Neo4j graph lookup with OpenAI-embedding similarity so answers can be grounded in both the structure and the text. See <a href="https://github.com/priyankabolem/RAG-Chatbot-1" target="_blank" rel="noopener">RAG-Chatbot-1</a>.</p>
-          </div>
+          <h3>Two stages beat one big model</h3>
+          <p>Grocery search needs both lexical relevance and behavioral signal. Asking one model for both is worse and slower than letting Vertex AI Search handle recall, then re-ranking the short candidate list with a cheap propensity model in a single batched call. The result holds a 152 ms p95 on Cloud Run, and falls back to retrieval order if the endpoint is unavailable. See <a href="https://github.com/priyankabolem/grocery-search-vertex" target="_blank" rel="noopener">grocery-search-vertex</a>.</p>
+        </article>
+        <article class="note reveal">
+          <div class="tag">Knowledge graphs</div>
+          <h3>Graph plus vector for structured domains</h3>
+          <p>University data has explicit relationships, program to department to requirement, that pure embedding search flattens. The chatbot pairs a Neo4j graph lookup with embedding similarity so answers are grounded in both the structure and the text. See <a href="https://github.com/priyankabolem/RAG-Chatbot-1" target="_blank" rel="noopener">RAG-Chatbot-1</a>.</p>
         </article>
       </div>
     </div>
@@ -703,25 +908,23 @@ html.js .reveal.in{opacity:1;transform:none}
       <div class="contact-box reveal">
         <div>
           <div class="eyebrow">Contact</div>
-          <h2 id="contact-title">Get in touch</h2>
-          <p>Questions about the projects, production ML, or working together: email is the fastest way to reach me.</p>
-          <div class="hero-cta" style="margin-top:1.4rem;margin-bottom:0">
+          <h2 id="contact-title">Let us build something</h2>
+          <p>I am open to Machine Learning Engineer, AI Engineer, Agentic AI and Forward Deployed Engineer roles. Questions about the projects, agentic systems or production ML are welcome too. Email is the fastest way to reach me.</p>
+          <div class="hero-cta" style="margin-top:1.5rem">
             <a class="btn btn-primary" href="mailto:priyankabolem93@gmail.com?subject=Hello%20from%20your%20portfolio">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              Email
+              Email me
             </a>
-            <a class="btn" href="resume.pdf?v=20260823" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Resume
+            <a class="btn" href="https://github.com/priyankabolem" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"/></svg>
+              GitHub
             </a>
           </div>
         </div>
         <ul class="contact-list">
           <li><a href="mailto:priyankabolem93@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="val">priyankabolem93@gmail.com</span><span class="lbl">email</span></a></li>
-          <li><a href="tel:+12063056760"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="val">+1 206-305-6760</span><span class="lbl">phone</span></a></li>
-          <li><a href="https://www.linkedin.com/in/priyanka-bolem" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg><span class="val">linkedin.com/in/priyanka-bolem</span><span class="lbl">linkedin</span></a></li>
           <li><a href="https://github.com/priyankabolem" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"/></svg><span class="val">github.com/priyankabolem</span><span class="lbl">github</span></a></li>
-          <li><a href="https://huggingface.co/Priyabolem" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8"/><circle cx="9" cy="10" r=".6" fill="currentColor"/><circle cx="15" cy="10" r=".6" fill="currentColor"/></svg><span class="val">huggingface.co/Priyabolem</span><span class="lbl">hugging face</span></a></li>
+          <li><a href="#home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="val">Greater Seattle, WA</span><span class="lbl">based in</span></a></li>
         </ul>
       </div>
     </div>
@@ -730,7 +933,7 @@ html.js .reveal.in{opacity:1;transform:none}
 
 <footer>
   <div class="container foot">
-    <span>© <span id="year">2026</span> Priyanka Bolem · Greater Seattle, WA</span>
+    <span>&copy; <span id="year">2026</span> Priyanka Bolem · Greater Seattle, WA</span>
     <span><a href="#home">Back to top</a></span>
   </div>
 </footer>
@@ -743,6 +946,7 @@ html.js .reveal.in{opacity:1;transform:none}
   function store(v){ try { localStorage.setItem(KEY, v); } catch(e){} }
   function systemTheme(){ return (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark'; }
   function apply(t){ if(t){ root.setAttribute('data-theme', t); } else { root.removeAttribute('data-theme'); } }
+
   var saved = stored();
   if (saved === 'light' || saved === 'dark') apply(saved);
 
